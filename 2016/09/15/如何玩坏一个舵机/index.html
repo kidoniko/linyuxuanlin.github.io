@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何玩坏一个舵机 | Lin&#39;s studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta name="keywords" content="Arduino,C++,code,教程,原创,改装,社团活动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何玩坏一个舵机">
+<meta property="og:url" content="http://yoursite.com/2016/09/15/如何玩坏一个舵机/index.html">
+<meta property="og:site_name" content="Lin&#39;s studio">
+<meta property="og:description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-7d91c87294adb382.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-9be63a06eca9dc43.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-1268a3416a45d375.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-7bc137198ac65914.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-ce45e1ce8a869ed2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-f81faeac715a89f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-2fab2f9620b5efb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-b5de55e257df450e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-3f7127da4c2c8d88.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-0eac79985ab1ae33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-41374b07e5f87b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-04e91993e3d57d4d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-964d07b3c4c304d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-d0aec7a2cb430e4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-01f991e787bdf9c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-07da3db46e5dc2db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-19T13:25:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何玩坏一个舵机">
+<meta name="twitter:description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Lin&#39;s studio" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Lin&#39;s studio</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">给时光以生命</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-如何玩坏一个舵机" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/15/如何玩坏一个舵机/" class="article-date">
+  <time datetime="2016-09-15T01:47:42.000Z" itemprop="datePublished">2016-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Arduino-3D打印/">Arduino&3D打印</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何玩坏一个舵机
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162045_HD.jpg"></p>
+<blockquote>
+<p>如图,这是一个9g舵机。<br>如果拿来造小车的话，简直再好不过了：</p>
+<ul>
+<li>体积小</li>
+<li>自带驱动</li>
+</ul>
+<p>但是，一个非常严重的问题<br>这只是一个90°舵机，总不能让小车在一步之间走来走去吧</p>
+</blockquote>
+<p>所以，今天来介绍一下<strong>把90°舵机改成360°舵机</strong>的方法</p>
+<a id="more"></a>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li>螺丝刀</li>
+<li>热熔胶枪</li>
+<li>剪钳</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-7d91c87294adb382.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161535_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-9be63a06eca9dc43.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161631_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1268a3416a45d375.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161713_HDR.jpg"></p>
+<h2 id="第一步，拆开舵机"><a href="#第一步，拆开舵机" class="headerlink" title="第一步，拆开舵机"></a>第一步，拆开舵机</h2><p><img src="http://upload-images.jianshu.io/upload_images/2218072-7bc137198ac65914.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161902_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-ce45e1ce8a869ed2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162045_HDR.jpg"></p>
+<p><strong>注意：一定要记住每个齿轮的位置！</strong><br><img src="http://upload-images.jianshu.io/upload_images/2218072-f81faeac715a89f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162245_HDR.jpg"></p>
+<h2 id="第二步，修改齿轮"><a href="#第二步，修改齿轮" class="headerlink" title="第二步，修改齿轮"></a>第二步，修改齿轮</h2><p>把最大的那个齿轮拣出来，用剪钳把后面凸起的地方剪掉<br><img src="http://upload-images.jianshu.io/upload_images/2218072-2fab2f9620b5efb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162408_HDR.jpg"><br>找一只比轴的直径大一点的螺丝刀，给这个齿轮扩大一下内径，使之能在轴上自由转动</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-b5de55e257df450e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_165434_HDR.jpg"></p>
+<h2 id="第三步，封死电位器"><a href="#第三步，封死电位器" class="headerlink" title="第三步，封死电位器"></a>第三步，封死电位器</h2><p>在做这一步之前，我们必须先把舵机<strong>回到中位</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-3f7127da4c2c8d88.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_163422_HDR.jpg"><br>找一块Arduino，打开IDE，给它来一段程序<br><img src="http://upload-images.jianshu.io/upload_images/2218072-0eac79985ab1ae33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="18309A6A-004B-4D31-9FE2-B68B182FE541.png"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//by Lin</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Servo.h&gt;</span></span></div><div class="line">Servo myservo; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.attach(<span class="number">9</span>);<span class="comment">//舵机连接Arduino的D9</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.write(<span class="number">90</span>); <span class="comment">//让舵机回到中位</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-41374b07e5f87b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sweep.png"><br>按图接上舵机，你会发现它一直在转。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-04e91993e3d57d4d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_164733_HDR.jpg"></p>
+<p>把右边的轴来回转几圈，找到一个让电机停下来的位置（把这里的电位器调到中间的值<br><img src="http://upload-images.jianshu.io/upload_images/2218072-964d07b3c4c304d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="封"></p>
+<p>给电位器上胶，封死它。注意，这时候不要不小心把轴给转动了，如果这样，重新返回第三步。</p>
+<h2 id="第四步，组装"><a href="#第四步，组装" class="headerlink" title="第四步，组装"></a>第四步，组装</h2><p><img src="http://upload-images.jianshu.io/upload_images/2218072-d0aec7a2cb430e4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组装"><br>把齿轮组装回去，注意不要弄错齿轮位置。<br>把螺丝锁上，这样你就得到了一个360°连转舵机了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-01f991e787bdf9c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_170546_HDR.jpg"></p>
+<h2 id="第五步，调试"><a href="#第五步，调试" class="headerlink" title="第五步，调试"></a>第五步，调试</h2><p>换个程序<br><img src="http://upload-images.jianshu.io/upload_images/2218072-07da3db46e5dc2db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="C3301660-18C1-46F2-9EAC-2B8FFC0C57BD.png"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Servo.h&gt;</span></span></div><div class="line">Servo myservo;  </div><div class="line"><span class="keyword">int</span> pos = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.attach(<span class="number">9</span>);  </div><div class="line">  &#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">for</span> (pos = <span class="number">0</span>; pos &lt;= <span class="number">180</span>; pos += <span class="number">1</span>) &#123; </div><div class="line">    <span class="comment">// in steps of 1 degree</span></div><div class="line">    myservo.write(pos);              </div><div class="line">    delay(<span class="number">15</span>);                       </div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span> (pos = <span class="number">180</span>; pos &gt;= <span class="number">0</span>; pos -= <span class="number">1</span>) &#123; </div><div class="line">    myservo.write(pos);              </div><div class="line">    delay(<span class="number">15</span>);                       </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果：舵机加速—减速—反方向加速—减速……</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>其实，舵机的创意还挺多的<br>比如，代替减速电机做个Arduino小车；给智能手环刷一下步数；<br>还有这个：<a href="http://mp.weixin.qq.com/s?__biz=MjM5MzUzODg2NA==&amp;mid=2652149326&amp;idx=1&amp;sn=1760691e14cd110345f1847658acefd3&amp;mpshare=1&amp;scene=1&amp;srcid=1003cUr6AYjfze46sYqMbGmP#rd" target="_blank" rel="external">逆天的舵机创意</a></p>
+<hr>
+<p>本文由 <a href="https://linyuxuanlin.github.io/about/" target="_blank" rel="external">Lin</a> 创作<br>可自由转载、引用，但需署名作者且注明文章出处。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/15/如何玩坏一个舵机/" data-id="cj4c1uw3a000pzqi7nhj59al8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/改装/">改装</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/社团活动/">社团活动</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/25/MeArm/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MeArm —— 3D打印机械臂
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/14/『三体』中的经典语录/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">『三体』中的经典语录</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Arduino-3D打印/">Arduino&3D打印</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Markdown/">Markdown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小技能/">小技能</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/感悟/">感悟</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D打印/">3D打印</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/其他/">其他</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原创/">原创</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小技能/">小技能</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感悟/">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘录/">摘录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/改装/">改装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文学/">文学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文艺复兴/">文艺复兴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/社团/">社团</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/社团活动/">社团活动</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3D打印/" style="font-size: 10px;">3D打印</a> <a href="/tags/Arduino/" style="font-size: 18px;">Arduino</a> <a href="/tags/C/" style="font-size: 18px;">C++</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/code/" style="font-size: 14px;">code</a> <a href="/tags/其他/" style="font-size: 10px;">其他</a> <a href="/tags/原创/" style="font-size: 14px;">原创</a> <a href="/tags/小技能/" style="font-size: 10px;">小技能</a> <a href="/tags/感悟/" style="font-size: 18px;">感悟</a> <a href="/tags/摘录/" style="font-size: 16px;">摘录</a> <a href="/tags/改装/" style="font-size: 10px;">改装</a> <a href="/tags/教程/" style="font-size: 18px;">教程</a> <a href="/tags/文学/" style="font-size: 10px;">文学</a> <a href="/tags/文艺复兴/" style="font-size: 20px;">文艺复兴</a> <a href="/tags/社团/" style="font-size: 12px;">社团</a> <a href="/tags/社团活动/" style="font-size: 10px;">社团活动</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/18/一场以创新为主题的演讲/">一场以创新为主题的演讲</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/31/做科研的正确方法/">做科研的正确方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/11/怎样优雅地复制百度文库/">怎样优雅地复制百度文库</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/06/写个小游戏/">写个小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/02/Arduino传感器教程汇总/">Arduino教程汇总</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Lin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
