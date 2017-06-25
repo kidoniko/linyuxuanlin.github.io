@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[T-Clock]]></title>
+    <url>%2F2017%2F06%2F25%2FT-Clock%2F</url>
+    <content type="text"><![CDATA[简介一直想给自己来一个桌上的小时钟，今天就来做一个吧~ 硬件 Arduino pro mini（主要是因为体积小，其他的型号也兼容） OLED屏（内部驱动芯片：SSD1306） SPI接口（如果是IIC或者是其他屏幕的也可以，修改程序第12行） RTC时钟模块（ds1307）（可加DS18B20测温） 锂电池 锂电池充电模块 开关 接线见代码，RTC模块按IIC协议接 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242/* name:T-ClockDescription: a tiny clock IDE version: 1.8.2Author: Lin &lt;linyuxuanlin.github.io&gt;Date: 2016-10-3*/#include &lt;U8glib.h&gt;#include &lt;SPI.h&gt;#include &lt;Wire.h&gt;#include &lt;RTClib.h&gt;U8GLIB_SSD1306_128X64 u8g(10, 9, 12, 11, 13);//这里适用的OLED屏的引脚是：D0,D1,RST,DC/*接线： OLED-Arduino D0-D10 D1-D9 RST-D13 DC-D11*/RTC_DS1307 RTC;//RTC按照IIC接线char monthString[37] =&#123; "JanFebMarAprMayJunJulAugSepOctNovDec"&#125;;int monthIndex[122] =&#123; 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33&#125;;String thisMonth = "";String thisTime = "";String thisDay = "";//用于定义表盘的中心int clockCentreX = 64;int clockCentreY = 32;void draw(void)&#123; u8g.setFont(u8g_font_profont15); DateTime now = RTC.now(); //在底部显示日期 thisDay = String(now.day(), DEC) + "/"; thisMonth = ""; for (int i = 0; i &lt;= 2; i++) &#123; thisMonth += monthString[monthIndex[now.month() - 1] + i]; &#125; thisDay = thisDay + thisMonth + "/"; thisDay = thisDay + String(now.year() , DEC); const char* newDay = (const char*) thisDay.c_str(); u8g.drawStr(32, 63, newDay); thisTime = ""; thisTime = String(now.hour()) + ":"; if (now.minute() &lt; 10) &#123; thisTime = thisTime + "0"; // 在单数数字前头加个0 &#125; //数字时间 thisTime = thisTime + String(now.minute()) ; const char* newTime = (const char*) thisTime.c_str(); u8g.drawStr(10, 10, newTime); //画时钟盘面 u8g.drawCircle(clockCentreX, clockCentreY, 20); // 外面的大圆 u8g.drawCircle(clockCentreX, clockCentreY, 2); // 里面的小圆 //跳动显示 for ( int z = 0; z &lt; 360; z = z + 30 ) &#123; //始于0°,止于360° float angle = z ; angle = (angle / 57.29577951) ; //化度数为弧度 int x2 = (clockCentreX + (sin(angle) * 20)); int y2 = (clockCentreY - (cos(angle) * 20)); int x3 = (clockCentreX + (sin(angle) * (20 - 5))); int y3 = (clockCentreY - (cos(angle) * (20 - 5))); u8g.drawLine(x2, y2, x3, y3); &#125; // 秒针 float angle = now.second() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 int x3 = (clockCentreX + (sin(angle) * (20))); int y3 = (clockCentreY - (cos(angle) * (20))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 分针 angle = now.minute() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 3))); y3 = (clockCentreY - (cos(angle) * (20 - 3))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 时针 angle = now.hour() * 30 + int((now.minute() / 12) * 6 ) ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 11))); y3 = (clockCentreY - (cos(angle) * (20 - 11))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); //显示自己的定制字符 u8g.setPrintPos(100, 10); u8g.print("Lin");&#125;void setup(void)&#123; Serial.begin(9600); analogReference(EXTERNAL); Wire.begin(); RTC.begin(); if (! RTC.isrunning()) &#123; Serial.println("RTC is NOT running!"); RTC.adjust(DateTime(__DATE__, __TIME__)); &#125;&#125;void loop(void)&#123; u8g.firstPage(); do &#123; draw(); &#125; while ( u8g.nextPage() ); delay(10);&#125; 外壳本来是想3D打印一个的，无奈焊接后时间不准，没法调了：) 资料下载所有文件：https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/T-Clock注：我提供的文件里已经包括下列库，这些仅供参考 RTClib库GitHub ：https://github.com/adafruit/RTClibU8glib库GitHub ： https://github.com/olikraus/u8glib备用：https://bintray.com/olikraus/u8glib 参考屏幕显示不了？先来测试一下~OLED-SPI试验用Arudino Uno给pro mini烧程序：http://blog.sina.com.cn/s/blog_53f8d23d0102wv3m.htmlU8glib用法：https://github.com/olikraus/u8glib/wiki/device#ssd1306-128x64GitHub源，英文http://www.geek-workshop.com/thread-10634-1-1.html极客工坊，中文，比较推荐OLED屏参考：引脚信息：D0：CLK时钟D1：MOSI数据RST：复位DC：数据/命令兼容3.3V和5V 写在最后这个项目花了一天的时间，我尽量让这这篇文章看起来详细和容易理解。 （不介意给这个项目一个star？）]]></content>
+      <categories>
+        <category>Arduino&amp;3D打印</category>
+      </categories>
+      <tags>
+        <tag>3D打印</tag>
+        <tag>Arduino</tag>
+        <tag>C++</tag>
+        <tag>code</tag>
+        <tag>原创</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一场以创新为主题的演讲]]></title>
     <url>%2F2017%2F03%2F18%2F%E4%B8%80%E5%9C%BA%E4%BB%A5%E5%88%9B%E6%96%B0%E4%B8%BA%E4%B8%BB%E9%A2%98%E7%9A%84%E6%BC%94%E8%AE%B2%2F</url>
     <content type="text"><![CDATA[来广州参加科创的省赛，有幸听中科院刘焕彬院士的精彩演讲，分享一下记录和自己的一些想法。 如何把知识转化为智慧？ 把公有知识转化为自有知识 把自有知识转化为智慧 知识的转化过程 公有知识 学习分析总结 自有知识 思考综合集成 智慧 创新发明 博览群书，分析总结 思考综合，交叉集成 思考模式注意三维思考：5W+H+QWho When Where What Why &amp; How``Quality 注意： 过程 方法 效果 培养创新思维的五要素 兴趣-质疑-思考-集成-实践 创新的基础 厚基础 强能力 宽适应 重人品 语录&amp;想法 许多创意其实都是已经使用过的变形，不是所谓的新创意都是崭新的。 把逆境当做机遇，在逆境中磨炼才华 头脑是需要被点燃的火把，要不断思考 掌握自己的学习和思考的方式-知识可学，智慧需悟 保持自己的立场，不迷信权威，不做权威 用两倍于自己说话的时间倾听对方讲话 比起知识，更注重智慧；更注重时间和知识，比起学习 从不需要本钱的事情开始做 笑]]></content>
@@ -93,8 +109,8 @@
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>code</tag>
-        <tag>教程</tag>
         <tag>原创</tag>
+        <tag>教程</tag>
         <tag>改装</tag>
         <tag>社团活动</tag>
       </tags>
@@ -103,6 +119,19 @@
     <title><![CDATA[『三体』中的经典语录]]></title>
     <url>%2F2016%2F09%2F14%2F%E3%80%8E%E4%B8%89%E4%BD%93%E3%80%8F%E4%B8%AD%E7%9A%84%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%BD%95%2F</url>
     <content type="text"><![CDATA[摘录了几条感触较深的: 给岁月以文明，而不是给文明以岁月 你的无畏来源于无知 大自然真的是自然的吗？ 弱小和无知，都不是生存的障碍，傲慢才是 在技术面前，艺术、文学都可以被直接忽略 碑是那么小，与其说是为了纪念，更像是为了忘却 毁灭你，又与你有何相干？ 前进！前进！不择手段的前进！ 唯一不可阻挡的是时间，它像一把利刃，无声地切开了坚硬和柔软的一切，恒定的向前推进着，没有任何东西能够使它的行径产生丝毫颠簸，它却改变着一切。 这就完了？有料黑暗森林法则改编的公司生存法则· 生存是创业公司的第一需要。 · 公司需要不断扩张，但市场总量有限。 · 小公司随时可能发生技术爆炸，一下子远远走在大公司前面，灭掉大公司。 · 弱小和无知不是生存的障碍，傲慢才是。（某大公司老板经常说，公司离倒闭只有半年） · 毁灭你，与你何干。为了实现公司战略，哪管其他公司死活。 · 赶尽杀绝是对竞争对手最大的重视。 · 藏好自己（创意随时会被山寨的小公司）。做好清理（处于领先的大公司通过收购等手段消灭潜在对手）。 · 生存本就是一种幸运，但不知什么时候起，某些公司觉得生存成了唾手可得的东西，这是他们失败的根本原因。 · 降维攻击，不惜把市场环境做得更恶劣，自己宁可活得惨点，也要让竞争对手先死（比如电商几乎都在亏本），不能在低维生存的小公司就只能灭亡。 · 宇宙很大，生活更大，也许以后还有缘相见。]]></content>
+      <categories>
+        <category>感悟</category>
+      </categories>
+      <tags>
+        <tag>文艺复兴</tag>
+        <tag>感悟</tag>
+        <tag>摘录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[淘汰人的从来都是工具，不是年龄]]></title>
+    <url>%2F2016%2F09%2F14%2F%E6%B7%98%E6%B1%B0%E4%BA%BA%E7%9A%84%E4%BB%8E%E6%9D%A5%E9%83%BD%E6%98%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8D%E6%98%AF%E5%B9%B4%E9%BE%84%2F</url>
+    <content type="text"><![CDATA[汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。 在新的工具面前，一切价值被重构，包括时间的意义和对能力的定义. 每一次工具革命发生的时候，原有生态链中既得利益者往往无法适应，他们的思维和运作体系已在原有的工具系统中形成惯性，在犹豫和恐惧中，新的竞争者已经刀逼颈部。 Lin的观点： 不禁想起《三体》中的”技术爆炸” “人类从狩猎时代到农业时代，用了十几万个地球年时间；从农业时代到工业时代用了几千地球年；而由工业时代到原子时代，只用了二百地球年；之后，仅用了几十个地球年，人类就进入了信息时代。” 在现代社会，人类的科技呈指数型发展。这个时代的工具衰老速度一定快于人的年龄的衰老。所以，我们要增强自己的适应能力，用积极的心态去接受不断更新的工具 观点：by吴晓波 改编：我]]></content>
       <categories>
         <category>感悟</category>
       </categories>
@@ -123,19 +152,6 @@
         <tag>文艺复兴</tag>
         <tag>摘录</tag>
         <tag>文学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[淘汰人的从来都是工具，不是年龄]]></title>
-    <url>%2F2016%2F09%2F14%2F%E6%B7%98%E6%B1%B0%E4%BA%BA%E7%9A%84%E4%BB%8E%E6%9D%A5%E9%83%BD%E6%98%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8D%E6%98%AF%E5%B9%B4%E9%BE%84%2F</url>
-    <content type="text"><![CDATA[汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。 在新的工具面前，一切价值被重构，包括时间的意义和对能力的定义. 每一次工具革命发生的时候，原有生态链中既得利益者往往无法适应，他们的思维和运作体系已在原有的工具系统中形成惯性，在犹豫和恐惧中，新的竞争者已经刀逼颈部。 Lin的观点： 不禁想起《三体》中的”技术爆炸” “人类从狩猎时代到农业时代，用了十几万个地球年时间；从农业时代到工业时代用了几千地球年；而由工业时代到原子时代，只用了二百地球年；之后，仅用了几十个地球年，人类就进入了信息时代。” 在现代社会，人类的科技呈指数型发展。这个时代的工具衰老速度一定快于人的年龄的衰老。所以，我们要增强自己的适应能力，用积极的心态去接受不断更新的工具 观点：by吴晓波 改编：我]]></content>
-      <categories>
-        <category>感悟</category>
-      </categories>
-      <tags>
-        <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>摘录</tag>
       </tags>
   </entry>
   <entry>
@@ -174,8 +190,8 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>教程</tag>
         <tag>原创</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -197,12 +213,12 @@
         <category>Arduino&amp;3D打印</category>
       </categories>
       <tags>
+        <tag>3D打印</tag>
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>code</tag>
-        <tag>教程</tag>
         <tag>原创</tag>
-        <tag>3D打印</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
