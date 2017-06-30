@@ -10,10 +10,8 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>code</tag>
         <tag>教程</tag>
         <tag>3D打印</tag>
-        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -24,7 +22,7 @@
         <category>观点</category>
       </categories>
       <tags>
-        <tag>原创</tag>
+        <tag>观点</tag>
       </tags>
   </entry>
   <entry>
@@ -47,7 +45,7 @@
         <category>技巧</category>
       </categories>
       <tags>
-        <tag>小技能</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -60,9 +58,7 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>code</tag>
         <tag>教程</tag>
-        <tag>社团</tag>
       </tags>
   </entry>
   <entry>
@@ -75,9 +71,7 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>code</tag>
         <tag>教程</tag>
-        <tag>社团</tag>
       </tags>
   </entry>
   <entry>
@@ -88,9 +82,7 @@
         <category>观点</category>
       </categories>
       <tags>
-        <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>摘录</tag>
+        <tag>观点</tag>
       </tags>
   </entry>
   <entry>
@@ -100,6 +92,12 @@
       <categories>
         <category>科技</category>
       </categories>
+      <tags>
+        <tag>Arduino</tag>
+        <tag>C++</tag>
+        <tag>教程</tag>
+        <tag>3D打印</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[如何玩坏一个舵机]]></title>
@@ -111,11 +109,8 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>code</tag>
         <tag>教程</tag>
-        <tag>原创</tag>
         <tag>改装</tag>
-        <tag>社团活动</tag>
       </tags>
   </entry>
   <entry>
@@ -126,9 +121,7 @@
         <category>文学</category>
       </categories>
       <tags>
-        <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>摘录</tag>
+        <tag>书摘</tag>
       </tags>
   </entry>
   <entry>
@@ -139,9 +132,7 @@
         <category>观点</category>
       </categories>
       <tags>
-        <tag>文艺复兴</tag>
-        <tag>摘录</tag>
-        <tag>文学</tag>
+        <tag>观点</tag>
       </tags>
   </entry>
   <entry>
@@ -152,9 +143,7 @@
         <category>观点</category>
       </categories>
       <tags>
-        <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>摘录</tag>
+        <tag>观点</tag>
       </tags>
   </entry>
   <entry>
@@ -165,9 +154,7 @@
         <category>观点</category>
       </categories>
       <tags>
-        <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>摘录</tag>
+        <tag>观点</tag>
       </tags>
   </entry>
   <entry>
@@ -194,7 +181,6 @@
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>教程</tag>
-        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -206,6 +192,7 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -218,10 +205,8 @@
       <tags>
         <tag>Arduino</tag>
         <tag>C++</tag>
-        <tag>code</tag>
         <tag>教程</tag>
         <tag>3D打印</tag>
-        <tag>原创</tag>
       </tags>
   </entry>
   <entry>
@@ -233,8 +218,6 @@
       </categories>
       <tags>
         <tag>文艺复兴</tag>
-        <tag>感悟</tag>
-        <tag>其他</tag>
       </tags>
   </entry>
 </search>
