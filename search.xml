@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[班服的设计]]></title>
+    <url>%2F2017%2F06%2F30%2F%E7%8F%AD%E6%9C%8D%E7%9A%84%E8%AE%BE%E8%AE%A1%2F</url>
+    <content type="text"><![CDATA[test挖坑]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>作品</tag>
+        <tag>设计</tag>
+        <tag>Illustrator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[配置hexo一键更新流程]]></title>
+    <url>%2F2017%2F06%2F30%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[挖坑]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[T-Clock]]></title>
     <url>%2F2017%2F06%2F25%2FT-Clock%2F</url>
     <content type="text"><![CDATA[简介一直想给自己来一个桌上的小时钟，今天就来做一个吧~ 硬件 Arduino pro mini（主要是因为体积小，其他的型号也兼容） OLED屏（内部驱动芯片：SSD1306） SPI接口（如果是IIC或者是其他屏幕的也可以，修改程序第12行） RTC时钟模块（ds1307）（可加DS18B20测温） 锂电池 锂电池充电模块 开关 接线见代码，RTC模块按IIC协议接 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242/*name:T-ClockDescription: a tiny clock IDE version: 1.8.2Author: Lin &lt;linyuxuanlin.github.io&gt;Date: 2016-10-3*/#include &lt;U8glib.h&gt;#include &lt;SPI.h&gt;#include &lt;Wire.h&gt;#include &lt;RTClib.h&gt;U8GLIB_SSD1306_128X64 u8g(10, 9, 12, 11, 13);//这里适用的OLED屏的引脚是：D0,D1,RST,DC/*接线： OLED-Arduino D0-D10 D1-D9 RST-D13 DC-D11*/RTC_DS1307 RTC;//RTC按照IIC接线char monthString[37] =&#123; "JanFebMarAprMayJunJulAugSepOctNovDec"&#125;;int monthIndex[122] =&#123; 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33&#125;;String thisMonth = "";String thisTime = "";String thisDay = "";//用于定义表盘的中心int clockCentreX = 64;int clockCentreY = 32;void draw(void)&#123; u8g.setFont(u8g_font_profont15); DateTime now = RTC.now(); //在底部显示日期 thisDay = String(now.day(), DEC) + "/"; thisMonth = ""; for (int i = 0; i &lt;= 2; i++) &#123; thisMonth += monthString[monthIndex[now.month() - 1] + i]; &#125; thisDay = thisDay + thisMonth + "/"; thisDay = thisDay + String(now.year() , DEC); const char* newDay = (const char*) thisDay.c_str(); u8g.drawStr(32, 63, newDay); thisTime = ""; thisTime = String(now.hour()) + ":"; if (now.minute() &lt; 10) &#123; thisTime = thisTime + "0"; // 在单数数字前头加个0 &#125; //数字时间 thisTime = thisTime + String(now.minute()) ; const char* newTime = (const char*) thisTime.c_str(); u8g.drawStr(10, 10, newTime); //画时钟盘面 u8g.drawCircle(clockCentreX, clockCentreY, 20); // 外面的大圆 u8g.drawCircle(clockCentreX, clockCentreY, 2); // 里面的小圆 //跳动显示 for ( int z = 0; z &lt; 360; z = z + 30 ) &#123; //始于0°,止于360° float angle = z ; angle = (angle / 57.29577951) ; //化度数为弧度 int x2 = (clockCentreX + (sin(angle) * 20)); int y2 = (clockCentreY - (cos(angle) * 20)); int x3 = (clockCentreX + (sin(angle) * (20 - 5))); int y3 = (clockCentreY - (cos(angle) * (20 - 5))); u8g.drawLine(x2, y2, x3, y3); &#125; // 秒针 float angle = now.second() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 int x3 = (clockCentreX + (sin(angle) * (20))); int y3 = (clockCentreY - (cos(angle) * (20))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 分针 angle = now.minute() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 3))); y3 = (clockCentreY - (cos(angle) * (20 - 3))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 时针 angle = now.hour() * 30 + int((now.minute() / 12) * 6 ) ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 11))); y3 = (clockCentreY - (cos(angle) * (20 - 11))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); //显示自己的定制字符 u8g.setPrintPos(100, 10); u8g.print("Lin");&#125;void setup(void)&#123; Serial.begin(9600); analogReference(EXTERNAL); Wire.begin(); RTC.begin(); if (! RTC.isrunning()) &#123; Serial.println("RTC is NOT running!"); RTC.adjust(DateTime(__DATE__, __TIME__)); &#125;&#125;void loop(void)&#123; u8g.firstPage(); do &#123; draw(); &#125; while ( u8g.nextPage() ); delay(10);&#125; 外壳本来是想3D打印一个的，无奈焊接后时间不准，没法调了：) 资料下载所有文件：https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/T-Clock注：我提供的文件里已经包括下列库，这些仅供参考 RTClib库GitHub ：https://github.com/adafruit/RTClibU8glib库GitHub ： https://github.com/olikraus/u8glib备用：https://bintray.com/olikraus/u8glib 参考屏幕显示不了？先来测试一下~OLED-SPI试验用Arudino Uno给pro mini烧程序：http://blog.sina.com.cn/s/blog_53f8d23d0102wv3m.htmlU8glib用法：https://github.com/olikraus/u8glib/wiki/device#ssd1306-128x64GitHub源，英文http://www.geek-workshop.com/thread-10634-1-1.html极客工坊，中文，比较推荐OLED屏参考：引脚信息：D0：CLK时钟D1：MOSI数据RST：复位DC：数据/命令兼容3.3V和5V 写在最后这个项目花了一天的时间，我尽量让这这篇文章看起来详细和容易理解。 （不介意给这个项目一个star？）]]></content>
