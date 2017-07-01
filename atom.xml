@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-01T01:18:17.000Z</updated>
+  <updated>2017-07-01T02:36:20.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站部署至coding.net</title>
+    <link href="https://linyuxuanlin.github.io/2017/07/01/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3coding.net/"/>
+    <id>https://linyuxuanlin.github.io/2017/07/01/网站部署至coding.net/</id>
+    <published>2017-07-01T13:59:04.000Z</published>
+    <updated>2017-07-01T02:36:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>现在可以从这个网址访问：<a href="https://linyuxuanlin.coding.me" target="_blank" rel="external">https://linyuxuanlin.coding.me</a><br>因为coding是国内的，所以现在的访问速度快多了。<br>如果需要教程的话请联系我，我会整理出来~</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-6e1c3335fc69cf24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 上午10.35.46.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在可以从这个网址访问：&lt;a href=&quot;https://linyuxuanlin.coding.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://linyuxuanlin.coding.me&lt;/a&gt;&lt;br&gt;因为coding是国内的，所以
+    
+    </summary>
+    
+      <category term="科技" scheme="https://linyuxuanlin.github.io/categories/%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Hexo" scheme="https://linyuxuanlin.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>MacOS配置hexo一键更新</title>
@@ -1004,45 +1030,6 @@
       <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
     
       <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你好，世界</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/10/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/10/你好，世界/</id>
-    <published>2016-09-10T14:18:32.000Z</published>
-    <updated>2017-06-30T14:26:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。</p>
-</blockquote>
-<p>历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。</p>
-<a id="more"></a>
-<h3 id="目标：做一个会输出的人"><a href="#目标：做一个会输出的人" class="headerlink" title="目标：做一个会输出的人"></a>目标：做一个会输出的人</h3><blockquote>
-<p>“输出”比“输入”要累得多，把自己的思想和每天所收获的传递出去，多了一个反刍，咀嚼和表达的过程。相比“输入”，“输出”能使我感受到善用时间和努力的快乐。这就够了，不是吗</p>
-</blockquote>
-<h3 id="关于github-pages"><a href="#关于github-pages" class="headerlink" title="关于github pages"></a>关于github pages</h3><ul>
-<li>相比之前wordpress的富文本编辑器，pages为我提供了简洁的Markdown语法</li>
-<li>蹭上hexo有好多好多的主题可以用</li>
-<li>还是之前那句话，我喜欢青菜，对海鲜持有绝对不吃的观点。我是处女座，现在用的这个主题我很满意。</li>
-</ul>
-<p>在这纷纷扰扰的世界里，与其临渊羡鱼，不如退而结网。每个人都有一张属于自己的网，织好这一张就够了。</p>
-<h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="观点" scheme="https://linyuxuanlin.github.io/categories/%E8%A7%82%E7%82%B9/"/>
-    
-    
-      <category term="文艺复兴" scheme="https://linyuxuanlin.github.io/tags/%E6%96%87%E8%89%BA%E5%A4%8D%E5%85%B4/"/>
     
   </entry>
   
