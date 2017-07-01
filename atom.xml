@@ -46,16 +46,31 @@
     <link href="https://linyuxuanlin.github.io/2017/07/01/%E6%8A%80%E5%B7%A7/%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/"/>
     <id>https://linyuxuanlin.github.io/2017/07/01/技巧/配置hexo一键更新流程/</id>
     <published>2017-07-01T12:59:04.000Z</published>
-    <updated>2017-07-01T08:39:41.000Z</updated>
+    <updated>2017-07-01T09:04:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/2218072-463c1043831fc7fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.34.18.png"></p>
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1a2d27076e613abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.34.18.png"></p>
 <p>众所周知，在Pages上写文章，写完之了后，需要在git命令行先生成，再部署。<br>缩减版的指令是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<p><code>hexo d -g</code></p>
+<p>再缩减，成了这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+<p>可是我们还想偷懒！有没有更简单的方法呢？</p>
+<a id="more"></a>
+<p>MacOS下有个神一般的应用，叫Automator，最近很流行的workflow就是由这个来的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-574b06a28b68ccd1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.43.40.png"><br>它能然你自定义工作流程，以完成一些重复而无脑的操作。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-384c3ed576b6e193.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.48.16.png"></p>
+<p>本文以一键更新Hexo为例，简略介绍一下Automator的用法。</p>
+<h1 id="一键更新Hexo"><a href="#一键更新Hexo" class="headerlink" title="一键更新Hexo"></a>一键更新Hexo</h1><h2 id="打开终端类"><a href="#打开终端类" class="headerlink" title="打开终端类"></a>打开终端类</h2><p>因为我用的是iTerm，所以下图直接打开它，如果是别的终端就选那个<br><img src="http://upload-images.jianshu.io/upload_images/2218072-e5ea94bbd758b6f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.52.18.png"></p>
+<h2 id="控制键盘输入hexo-d-g"><a href="#控制键盘输入hexo-d-g" class="headerlink" title="控制键盘输入hexo d -g"></a>控制键盘输入<code>hexo d -g</code></h2><p><img src="http://upload-images.jianshu.io/upload_images/2218072-214a9d78a5d49b40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-07-01 下午4.56.00.png"><br>找到<code>执行AppleScript</code>，把以下代码复制进框里：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">on run &#123;input, parameters&#125;</div><div class="line">	--</div><div class="line">	set timeoutSeconds to 0</div><div class="line">	set uiScript to &quot;keystroke \&quot;hexo d -g</div><div class="line"></div><div class="line">\&quot; &quot; --Mark，注意这行代码</div><div class="line">	my doWithTimeout(uiScript, timeoutSeconds)</div><div class="line">	return input</div><div class="line">end run</div><div class="line"></div><div class="line">on doWithTimeout(uiScript, timeoutSeconds)</div><div class="line">	set endDate to (current date) + timeoutSeconds</div><div class="line">	repeat</div><div class="line">		try</div><div class="line">			run script &quot;tell application \&quot;System Events\&quot;</div><div class="line">&quot; &amp; uiScript &amp; &quot;</div><div class="line">end tell&quot;</div><div class="line">			exit repeat</div><div class="line">		on error errorMessage</div><div class="line">			if ((current date) &gt; endDate) then</div><div class="line">				error &quot;Can not &quot; &amp; uiScript</div><div class="line">			end if</div><div class="line">		end try</div><div class="line">	end repeat</div><div class="line">end doWithTimeout</div></pre></td></tr></table></figure></p>
+<h2 id="完成！"><a href="#完成！" class="headerlink" title="完成！"></a>完成！</h2><p>先打开终端，输入<code>cd 博客位置</code>(这一操作不自动，因为只需要重复一次)。<br>单击<code>运行</code>按钮或者<code>cmd+R</code>，自动生成&amp;部署成功！</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>并不只有这个玩法，你也可以加一句<code>hexo s</code>进去试试，或者尝试别的玩法。<br>只有你想不到，没有Automator做不到的~</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2218072-463c1043831fc7fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2218072-1a2d27076e613abd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;屏幕快照 2017-07-01 下午4.34.18.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;众所周知，在Pages上写文章，写完之了后，需要在git命令行先生成，再部署。&lt;br&gt;缩减版的指令是这样的：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;再缩减，成了这样：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo d -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可是我们还想偷懒！有没有更简单的方法呢？&lt;/p&gt;
     
     </summary>
     
