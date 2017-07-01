@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-01T02:38:02.000Z</updated>
+  <updated>2017-07-01T13:28:15.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://linyuxuanlin.github.io/2019/06/30/%E6%B5%8B%E8%AF%95/"/>
+    <id>https://linyuxuanlin.github.io/2019/06/30/测试/</id>
+    <published>2019-06-30T14:18:32.000Z</published>
+    <updated>2017-07-01T13:28:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>photos:</p>
+<ul>
+<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg</a></li>
+<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;photos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://bruce.u.q
+    
+    </summary>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="Illustrator" scheme="https://linyuxuanlin.github.io/tags/Illustrator/"/>
+    
+  </entry>
   
   <entry>
     <title>网站部署至coding.net</title>
@@ -38,31 +71,6 @@
       <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
     
       <category term="Hexo" scheme="https://linyuxuanlin.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://linyuxuanlin.github.io/2017/07/01/%E6%B5%8B%E8%AF%95/"/>
-    <id>https://linyuxuanlin.github.io/2017/07/01/测试/</id>
-    <published>2017-07-01T13:26:38.000Z</published>
-    <updated>2017-07-01T13:26:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>layout: photo<br>title: 测试<br>date: 2085-01-16 07:33:44<br>tags: [hexo]<br>photos:</p>
-<ul>
-<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg</a></li>
-<li><a href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" target="_blank" rel="external">http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;layout: photo&lt;br&gt;title: 测试&lt;br&gt;date: 2085-01-16 07:33:44&lt;br&gt;tags: [hexo]&lt;br&gt;photos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bruce.u.qiniudn.com/2013/
-    
-    </summary>
-    
     
   </entry>
   
