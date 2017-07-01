@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[MacOS配置Hexo一键更新]]></title>
     <url>%2F2017%2F07%2F01%2F%E6%8A%80%E5%B7%A7%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[挖坑]]></content>
+    <content type="text"><![CDATA[众所周知，在Pages上写文章，写完之了后，需要在git命令行先生成，再部署。缩减版的指令是这样的：12hexo ghexo d hexo d -g]]></content>
       <categories>
         <category>技巧</category>
       </categories>
