@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacOS配置hexo一键更新]]></title>
+    <url>%2F2017%2F07%2F01%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[挖坑]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[班服的设计]]></title>
     <url>%2F2017%2F06%2F30%2F%E7%8F%AD%E6%9C%8D%E7%9A%84%E8%AE%BE%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[详细文件见GitHub仓库：https://github.com/linyuxuanlin/T-shirt-of-class 最终效果：（排球赛纪念） 正面 背面 注：”Linyx” 仅做参照]]></content>
@@ -11,18 +23,6 @@
         <tag>作品</tag>
         <tag>设计</tag>
         <tag>Illustrator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[配置hexo一键更新流程]]></title>
-    <url>%2F2017%2F06%2F30%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[挖坑]]></content>
-      <categories>
-        <category>技巧</category>
-      </categories>
-      <tags>
-        <tag>技巧</tag>
-        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
