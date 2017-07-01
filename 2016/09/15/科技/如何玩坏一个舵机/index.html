@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="文艺复兴,Hexo," />
+  <meta name="keywords" content="Arduino,C++,教程,改装," />
 
 
 
@@ -95,17 +95,35 @@
 
 
 
-<meta name="description" content="我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。  历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。">
-<meta name="keywords" content="文艺复兴,Hexo">
+<meta name="description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta name="keywords" content="Arduino,C++,教程,改装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好，世界">
-<meta property="og:url" content="https://linyuxuanlin.github.io/2016/09/10/你好，世界/index.html">
+<meta property="og:title" content="如何玩坏一个舵机">
+<meta property="og:url" content="https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/index.html">
 <meta property="og:site_name" content="辐射工作站">
-<meta property="og:description" content="我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。  历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。">
-<meta property="og:updated_time" content="2017-07-01T02:37:57.000Z">
+<meta property="og:description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-7d91c87294adb382.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-9be63a06eca9dc43.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-1268a3416a45d375.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-7bc137198ac65914.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-ce45e1ce8a869ed2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-f81faeac715a89f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-2fab2f9620b5efb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-b5de55e257df450e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-3f7127da4c2c8d88.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-0eac79985ab1ae33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-41374b07e5f87b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-04e91993e3d57d4d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-964d07b3c4c304d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-d0aec7a2cb430e4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-01f991e787bdf9c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-07da3db46e5dc2db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-06-30T14:10:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好，世界">
-<meta name="twitter:description" content="我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。  历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。">
+<meta name="twitter:title" content="如何玩坏一个舵机">
+<meta name="twitter:description" content="如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了：  体积小 自带驱动  但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧  所以，今天来介绍一下把90°舵机改成360°舵机的方法">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -133,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="https://linyuxuanlin.github.io/2016/09/10/你好，世界/"/>
+  <link rel="canonical" href="https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/"/>
 
 
 
 
 
-  <title>你好，世界 | 辐射工作站</title>
+  <title>如何玩坏一个舵机 | 辐射工作站</title>
   
 
 
@@ -351,7 +369,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://linyuxuanlin.github.io/2016/09/10/你好，世界/">
+    <link itemprop="mainEntityOfPage" href="https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lin">
@@ -368,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好，世界</h1>
+          <h1 class="post-title" itemprop="name headline">如何玩坏一个舵机</h1>
         
 
         <div class="post-meta">
@@ -380,8 +398,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-10T22:18:32+08:00">
-                2016-09-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-15T09:47:42+08:00">
+                2016-09-15
               </time>
             
 
@@ -403,8 +421,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/观点/" itemprop="url" rel="index">
-                    <span itemprop="name">观点</span>
+                  <a href="/categories/科技/" itemprop="url" rel="index">
+                    <span itemprop="name">科技</span>
                   </a>
                 </span>
 
@@ -421,8 +439,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/09/10/你好，世界/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/10/你好，世界/" itemprop="commentCount"></span>
+                <a href="/2016/09/15/科技/如何玩坏一个舵机/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/15/科技/如何玩坏一个舵机/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -444,7 +462,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  294
+                  504
                 </span>
               
 
@@ -466,21 +484,44 @@
       
 
       
-        <blockquote>
-<p>我把第一篇文章命名为”Hello world”,这个代表着所有编程语言的开始的词语，也标志着这个全新的个人站点将会是一个与代码有关的园地。</p>
-</blockquote>
-<p>历经千辛万苦，前前后后断断续续地造了两个多月，终于在Github pages上把网站建起来了。</p>
-<a id="more"></a>
-<h3 id="目标：做一个会输出的人"><a href="#目标：做一个会输出的人" class="headerlink" title="目标：做一个会输出的人"></a>目标：做一个会输出的人</h3><blockquote>
-<p>“输出”比“输入”要累得多，把自己的思想和每天所收获的传递出去，多了一个反刍，咀嚼和表达的过程。相比“输入”，“输出”能使我感受到善用时间和努力的快乐。这就够了，不是吗</p>
-</blockquote>
-<h3 id="关于github-pages"><a href="#关于github-pages" class="headerlink" title="关于github pages"></a>关于github pages</h3><ul>
-<li>相比之前wordpress的富文本编辑器，pages为我提供了简洁的Markdown语法</li>
-<li>蹭上hexo有好多好多的主题可以用</li>
-<li>还是之前那句话，我喜欢青菜，对海鲜持有绝对不吃的观点。我是处女座，现在用的这个主题我很满意。</li>
+        <p><img src="http://upload-images.jianshu.io/upload_images/2218072-04cbc8eb7ac10ddc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162045_HD.jpg"></p>
+<blockquote>
+<p>如图,这是一个9g舵机。<br>如果拿来造小车的话，简直再好不过了：</p>
+<ul>
+<li>体积小</li>
+<li>自带驱动</li>
 </ul>
-<p>在这纷纷扰扰的世界里，与其临渊羡鱼，不如退而结网。每个人都有一张属于自己的网，织好这一张就够了。</p>
-<h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2>
+<p>但是，一个非常严重的问题<br>这只是一个90°舵机，总不能让小车在一步之间走来走去吧</p>
+</blockquote>
+<p>所以，今天来介绍一下<strong>把90°舵机改成360°舵机</strong>的方法</p>
+<a id="more"></a>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li>螺丝刀</li>
+<li>热熔胶枪</li>
+<li>剪钳</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-7d91c87294adb382.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161535_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-9be63a06eca9dc43.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161631_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1268a3416a45d375.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161713_HDR.jpg"></p>
+<h2 id="第一步，拆开舵机"><a href="#第一步，拆开舵机" class="headerlink" title="第一步，拆开舵机"></a>第一步，拆开舵机</h2><p><img src="http://upload-images.jianshu.io/upload_images/2218072-7bc137198ac65914.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_161902_HDR.jpg"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-ce45e1ce8a869ed2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162045_HDR.jpg"></p>
+<p><strong>注意：一定要记住每个齿轮的位置！</strong><br><img src="http://upload-images.jianshu.io/upload_images/2218072-f81faeac715a89f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162245_HDR.jpg"></p>
+<h2 id="第二步，修改齿轮"><a href="#第二步，修改齿轮" class="headerlink" title="第二步，修改齿轮"></a>第二步，修改齿轮</h2><p>把最大的那个齿轮拣出来，用剪钳把后面凸起的地方剪掉<br><img src="http://upload-images.jianshu.io/upload_images/2218072-2fab2f9620b5efb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_162408_HDR.jpg"><br>找一只比轴的直径大一点的螺丝刀，给这个齿轮扩大一下内径，使之能在轴上自由转动</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-b5de55e257df450e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_165434_HDR.jpg"></p>
+<h2 id="第三步，封死电位器"><a href="#第三步，封死电位器" class="headerlink" title="第三步，封死电位器"></a>第三步，封死电位器</h2><p>在做这一步之前，我们必须先把舵机<strong>回到中位</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-3f7127da4c2c8d88.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_163422_HDR.jpg"><br>找一块Arduino，打开IDE，给它来一段程序<br><img src="http://upload-images.jianshu.io/upload_images/2218072-0eac79985ab1ae33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="18309A6A-004B-4D31-9FE2-B68B182FE541.png"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//by Lin</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Servo.h&gt;</span></span></div><div class="line">Servo myservo;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.attach(<span class="number">9</span>);<span class="comment">//舵机连接Arduino的D9</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.write(<span class="number">90</span>); <span class="comment">//让舵机回到中位</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-41374b07e5f87b06.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sweep.png"><br>按图接上舵机，你会发现它一直在转。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-04e91993e3d57d4d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_164733_HDR.jpg"></p>
+<p>把右边的轴来回转几圈，找到一个让电机停下来的位置（把这里的电位器调到中间的值<br><img src="http://upload-images.jianshu.io/upload_images/2218072-964d07b3c4c304d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="封"></p>
+<p>给电位器上胶，封死它。注意，这时候不要不小心把轴给转动了，如果这样，重新返回第三步。</p>
+<h2 id="第四步，组装"><a href="#第四步，组装" class="headerlink" title="第四步，组装"></a>第四步，组装</h2><p><img src="http://upload-images.jianshu.io/upload_images/2218072-d0aec7a2cb430e4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组装"><br>把齿轮组装回去，注意不要弄错齿轮位置。<br>把螺丝锁上，这样你就得到了一个360°连转舵机了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-01f991e787bdf9c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20160915_170546_HDR.jpg"></p>
+<h2 id="第五步，调试"><a href="#第五步，调试" class="headerlink" title="第五步，调试"></a>第五步，调试</h2><p>换个程序<br><img src="http://upload-images.jianshu.io/upload_images/2218072-07da3db46e5dc2db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="C3301660-18C1-46F2-9EAC-2B8FFC0C57BD.png"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Servo.h&gt;</span></span></div><div class="line">Servo myservo;  </div><div class="line"><span class="keyword">int</span> pos = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  myservo.attach(<span class="number">9</span>);  </div><div class="line">  &#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">for</span> (pos = <span class="number">0</span>; pos &lt;= <span class="number">180</span>; pos += <span class="number">1</span>) &#123;</div><div class="line">    <span class="comment">// in steps of 1 degree</span></div><div class="line">    myservo.write(pos);              </div><div class="line">    delay(<span class="number">15</span>);                       </div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span> (pos = <span class="number">180</span>; pos &gt;= <span class="number">0</span>; pos -= <span class="number">1</span>) &#123;</div><div class="line">    myservo.write(pos);              </div><div class="line">    delay(<span class="number">15</span>);                       </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果：舵机加速—减速—反方向加速—减速……</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>其实，舵机的创意还挺多的<br>比如，代替减速电机做个Arduino小车；给智能手环刷一下步数；<br>还有这个：<a href="http://mp.weixin.qq.com/s?__biz=MjM5MzUzODg2NA==&amp;mid=2652149326&amp;idx=1&amp;sn=1760691e14cd110345f1847658acefd3&amp;mpshare=1&amp;scene=1&amp;srcid=1003cUr6AYjfze46sYqMbGmP#rd" target="_blank" rel="external">逆天的舵机创意</a></p>
+
       
     </div>
 
@@ -534,7 +575,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://linyuxuanlin.github.io/2016/09/10/你好，世界/" title="你好，世界">https://linyuxuanlin.github.io/2016/09/10/你好，世界/</a>
+      <a href="https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/" title="如何玩坏一个舵机">https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -550,9 +591,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/文艺复兴/" rel="tag"># 文艺复兴</a>
+            <a href="/tags/Arduino/" rel="tag"># Arduino</a>
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/改装/" rel="tag"># 改装</a>
           
         </div>
       
@@ -565,14 +610,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/14/灵感并不那么值钱/" rel="next" title="灵感并不那么值钱">
+                <i class="fa fa-chevron-left"></i> 灵感并不那么值钱
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/11/科技/造个方舟反应炉/" rel="prev" title="造个方舟反应炉">
-                造个方舟反应炉 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/25/科技/MeArm/" rel="prev" title="MeArm —— 3D打印机械臂">
+                MeArm —— 3D打印机械臂 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,8 +654,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/10/你好，世界/"
-           data-title="你好，世界" data-url="https://linyuxuanlin.github.io/2016/09/10/你好，世界/">
+      <div class="ds-thread" data-thread-key="2016/09/15/科技/如何玩坏一个舵机/"
+           data-title="如何玩坏一个舵机" data-url="https://linyuxuanlin.github.io/2016/09/15/科技/如何玩坏一个舵机/">
       </div>
     
   </div>
@@ -774,7 +823,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标：做一个会输出的人"><span class="nav-number">1.</span> <span class="nav-text">目标：做一个会输出的人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于github-pages"><span class="nav-number">2.</span> <span class="nav-text">关于github pages</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完"><span class="nav-number"></span> <span class="nav-text">完</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步，拆开舵机"><span class="nav-number">2.</span> <span class="nav-text">第一步，拆开舵机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步，修改齿轮"><span class="nav-number">3.</span> <span class="nav-text">第二步，修改齿轮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步，封死电位器"><span class="nav-number">4.</span> <span class="nav-text">第三步，封死电位器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步，组装"><span class="nav-number">5.</span> <span class="nav-text">第四步，组装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步，调试"><span class="nav-number">6.</span> <span class="nav-text">第五步，调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展"><span class="nav-number">7.</span> <span class="nav-text">拓展</span></a></li></ol></div>
             
 
           </div>

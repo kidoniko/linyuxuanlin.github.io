@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[网站部署至coding.net]]></title>
-    <url>%2F2017%2F07%2F01%2F%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3coding.net%2F</url>
+    <url>%2F2017%2F07%2F01%2F%E7%A7%91%E6%8A%80%2F%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3coding.net%2F</url>
     <content type="text"><![CDATA[现在可以从这个网址访问：https://linyuxuanlin.coding.me因为coding是国内的，所以现在的访问速度快多了。如果需要教程的话请联系我，我会整理出来~]]></content>
       <categories>
         <category>科技</category>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <title><![CDATA[MacOS配置Hexo一键更新]]></title>
-    <url>%2F2017%2F07%2F01%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
+    <url>%2F2017%2F07%2F01%2F%E7%A7%91%E6%8A%80%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[挖坑]]></content>
       <categories>
         <category>技巧</category>
@@ -40,7 +40,7 @@
   </entry>
   <entry>
     <title><![CDATA[T-Clock]]></title>
-    <url>%2F2017%2F06%2F25%2FT-Clock%2F</url>
+    <url>%2F2017%2F06%2F25%2F%E7%A7%91%E6%8A%80%2FT-Clock%2F</url>
     <content type="text"><![CDATA[简介一直想给自己来一个桌上的小时钟，今天就来做一个吧~ 硬件 Arduino pro mini（主要是因为体积小，其他的型号也兼容） OLED屏（内部驱动芯片：SSD1306） SPI接口（如果是IIC或者是其他屏幕的也可以，修改程序第12行） RTC时钟模块（ds1307）（可加DS18B20测温） 锂电池 锂电池充电模块 开关 接线见代码，RTC模块按IIC协议接 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242/*name:T-ClockDescription: a tiny clock IDE version: 1.8.2Author: Lin &lt;linyuxuanlin.github.io&gt;Date: 2016-10-3*/#include &lt;U8glib.h&gt;#include &lt;SPI.h&gt;#include &lt;Wire.h&gt;#include &lt;RTClib.h&gt;U8GLIB_SSD1306_128X64 u8g(10, 9, 12, 11, 13);//这里适用的OLED屏的引脚是：D0,D1,RST,DC/*接线： OLED-Arduino D0-D10 D1-D9 RST-D13 DC-D11*/RTC_DS1307 RTC;//RTC按照IIC接线char monthString[37] =&#123; "JanFebMarAprMayJunJulAugSepOctNovDec"&#125;;int monthIndex[122] =&#123; 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33&#125;;String thisMonth = "";String thisTime = "";String thisDay = "";//用于定义表盘的中心int clockCentreX = 64;int clockCentreY = 32;void draw(void)&#123; u8g.setFont(u8g_font_profont15); DateTime now = RTC.now(); //在底部显示日期 thisDay = String(now.day(), DEC) + "/"; thisMonth = ""; for (int i = 0; i &lt;= 2; i++) &#123; thisMonth += monthString[monthIndex[now.month() - 1] + i]; &#125; thisDay = thisDay + thisMonth + "/"; thisDay = thisDay + String(now.year() , DEC); const char* newDay = (const char*) thisDay.c_str(); u8g.drawStr(32, 63, newDay); thisTime = ""; thisTime = String(now.hour()) + ":"; if (now.minute() &lt; 10) &#123; thisTime = thisTime + "0"; // 在单数数字前头加个0 &#125; //数字时间 thisTime = thisTime + String(now.minute()) ; const char* newTime = (const char*) thisTime.c_str(); u8g.drawStr(10, 10, newTime); //画时钟盘面 u8g.drawCircle(clockCentreX, clockCentreY, 20); // 外面的大圆 u8g.drawCircle(clockCentreX, clockCentreY, 2); // 里面的小圆 //跳动显示 for ( int z = 0; z &lt; 360; z = z + 30 ) &#123; //始于0°,止于360° float angle = z ; angle = (angle / 57.29577951) ; //化度数为弧度 int x2 = (clockCentreX + (sin(angle) * 20)); int y2 = (clockCentreY - (cos(angle) * 20)); int x3 = (clockCentreX + (sin(angle) * (20 - 5))); int y3 = (clockCentreY - (cos(angle) * (20 - 5))); u8g.drawLine(x2, y2, x3, y3); &#125; // 秒针 float angle = now.second() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 int x3 = (clockCentreX + (sin(angle) * (20))); int y3 = (clockCentreY - (cos(angle) * (20))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 分针 angle = now.minute() * 6 ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 3))); y3 = (clockCentreY - (cos(angle) * (20 - 3))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); // 时针 angle = now.hour() * 30 + int((now.minute() / 12) * 6 ) ; angle = (angle / 57.29577951) ; //化度数为弧度 x3 = (clockCentreX + (sin(angle) * (20 - 11))); y3 = (clockCentreY - (cos(angle) * (20 - 11))); u8g.drawLine(clockCentreX, clockCentreY, x3, y3); //显示自己的定制字符 u8g.setPrintPos(100, 10); u8g.print("Lin");&#125;void setup(void)&#123; Serial.begin(9600); analogReference(EXTERNAL); Wire.begin(); RTC.begin(); if (! RTC.isrunning()) &#123; Serial.println("RTC is NOT running!"); RTC.adjust(DateTime(__DATE__, __TIME__)); &#125;&#125;void loop(void)&#123; u8g.firstPage(); do &#123; draw(); &#125; while ( u8g.nextPage() ); delay(10);&#125; 外壳本来是想3D打印一个的，无奈焊接后时间不准，没法调了：) 资料下载所有文件：https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/T-Clock注：我提供的文件里已经包括下列库，这些仅供参考 RTClib库GitHub ：https://github.com/adafruit/RTClibU8glib库GitHub ： https://github.com/olikraus/u8glib备用：https://bintray.com/olikraus/u8glib 参考屏幕显示不了？先来测试一下~OLED-SPI试验用Arudino Uno给pro mini烧程序：http://blog.sina.com.cn/s/blog_53f8d23d0102wv3m.htmlU8glib用法：https://github.com/olikraus/u8glib/wiki/device#ssd1306-128x64GitHub源，英文http://www.geek-workshop.com/thread-10634-1-1.html极客工坊，中文，比较推荐OLED屏参考：引脚信息：D0：CLK时钟D1：MOSI数据RST：复位DC：数据/命令兼容3.3V和5V 写在最后这个项目花了一天的时间，我尽量让这这篇文章看起来详细和容易理解。 （不介意给这个项目一个star？）]]></content>
       <categories>
         <category>科技</category>
@@ -49,8 +49,8 @@
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>教程</tag>
-        <tag>3D打印</tag>
         <tag>作品</tag>
+        <tag>3D打印</tag>
       </tags>
   </entry>
   <entry>
@@ -102,7 +102,7 @@
   </entry>
   <entry>
     <title><![CDATA[Arduino教程汇总]]></title>
-    <url>%2F2016%2F10%2F02%2FArduino%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB%2F</url>
+    <url>%2F2016%2F10%2F02%2F%E7%A7%91%E6%8A%80%2FArduino%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB%2F</url>
     <content type="text"><![CDATA[缓更 什么是Arduino?可以把Arduino主控板看做一个微缩版电脑，编写程序，交给Arduino帮你执行。若你想造一只机器人，Arudino作为控制中枢，从各传感器接收数据，处理并交给其它传感器执行，这样，机器人就能动了。 Arduino的优势Arduino在全世界创客圈的影响范围很大，有数不胜数的开源社区、论坛。对比51单片机，Arduino极易入门，而且能适应快速开发。对于我们学生，随时能造出一些黑科技，服务于我们的生活。 各类传感器的参考输入类按钮 1. 简介:输入设备，按下时输出低电平，反之 2. 接线:3. 程序: 12345678910111213141516171819202122232425//name: Button example//Description: 按扭的例程//IDE version: 1.6//Author: Lin &lt;linyuxuanlin.github.io&gt;//Date: 2016-10-3//note: 按下按钮，LED亮；松开，LED灭int Button = 2;int LEDpin = 13;void setup() &#123; pinMode(Button, INPUT_PULLUP); //上拉使之默认接高电平,省去电阻 pinMode(LEDpin, OUTPUT); //设置13号IO口为输出状态&#125;void loop() &#123; int ButtonState = digitalRead(Button); //设置变量存储状态值 if(ButtonState==0) &#123; digitalWrite(LEDpin,HIGH); //如果读到的状态为0，说明按键已经按下，点亮LED &#125; else &#123; digitalWrite(LEDpin,LOW); // 反之，熄灭LED &#125; &#125; 超声波传感器 1. 简介:检测距离2. 接线: 3. 程序:为了最大程度简化程序，这里我们可以用到这个库文件SR04库123456789101112131415161718192021222324/*name: HC-SR04 exampleDescription: 超声波测距,输出至串口IDE version: 1.6Author: Lin &lt;linyuxuanlin.github.io&gt;Date: 2016-10-5note: TRIG - 2 ECHO - 3*/#include "SR04.h"SR04 sr04 = SR04(3,2);void setup() &#123; Serial.begin(9600); //串口启动 Serial.println("Hi there!"); delay(1000);&#125;void loop() &#123; int a=sr04.Distance(); //把读到的数据赋值给a Serial.print(a); //输出 Serial.println("cm"); delay(500);&#125; 旋转编码器 1. 简介: 旋转，输出不同数值 2. 接线:3. 程序:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051//name: RotaryEncoder example//Description: 旋转编码器例程//IDE version: 1.6//Author: Lin &lt;linyuxuanlin.github.io&gt;//Date: 2016-10-2//note: 顺时针旋转数值变大；逆时针变小；按钮按下时显示#define ENCODER_A_PIN 2#define ENCODER_B_PIN 3#define SWITCH_PIN 4long position;void setup()&#123; //初始化 pinMode(ENCODER_A_PIN, INPUT); pinMode(ENCODER_B_PIN, INPUT); pinMode(SWITCH_PIN, INPUT); //硬件中断 attachInterrupt(0, read_quadrature, CHANGE); //初始化串口 Serial.begin(9600);&#125;void loop()&#123; if (digitalRead(SWITCH_PIN) == LOW)&#123; delay(10); if (digitalRead(SWITCH_PIN) == LOW)&#123; Serial.println("Switch Pressed"); &#125; &#125; Serial.print("Position: "); Serial.println(position, DEC); delay(500);&#125;void read_quadrature()&#123; // ENA脚下降沿中断触发 if (digitalRead(ENCODER_A_PIN) == LOW)&#123; //查询ENB的电平以确认是顺时针还是逆时针旋转 if (digitalRead(ENCODER_B_PIN) == LOW) position++; &#125; // ENA脚上升沿中断触发 else&#123; //查询ENB的电平以确认是顺时针还是逆时针旋转 if (digitalRead(ENCODER_B_PIN) == LOW) position--; &#125;&#125; 未完，有时间继续填坑]]></content>
       <categories>
         <category>科技</category>
@@ -126,7 +126,7 @@
   </entry>
   <entry>
     <title><![CDATA[MeArm —— 3D打印机械臂]]></title>
-    <url>%2F2016%2F09%2F25%2FMeArm%2F</url>
+    <url>%2F2016%2F09%2F25%2F%E7%A7%91%E6%8A%80%2FMeArm%2F</url>
     <content type="text"><![CDATA[先放个预告，有空整理 = =]]></content>
       <categories>
         <category>科技</category>
@@ -135,13 +135,13 @@
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>教程</tag>
-        <tag>3D打印</tag>
         <tag>作品</tag>
+        <tag>3D打印</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[如何玩坏一个舵机]]></title>
-    <url>%2F2016%2F09%2F15%2F%E5%A6%82%E4%BD%95%E7%8E%A9%E5%9D%8F%E4%B8%80%E4%B8%AA%E8%88%B5%E6%9C%BA%2F</url>
+    <url>%2F2016%2F09%2F15%2F%E7%A7%91%E6%8A%80%2F%E5%A6%82%E4%BD%95%E7%8E%A9%E5%9D%8F%E4%B8%80%E4%B8%AA%E8%88%B5%E6%9C%BA%2F</url>
     <content type="text"><![CDATA[如图,这是一个9g舵机。如果拿来造小车的话，简直再好不过了： 体积小 自带驱动 但是，一个非常严重的问题这只是一个90°舵机，总不能让小车在一步之间走来走去吧 所以，今天来介绍一下把90°舵机改成360°舵机的方法 准备 螺丝刀 热熔胶枪 剪钳 第一步，拆开舵机 注意：一定要记住每个齿轮的位置！ 第二步，修改齿轮把最大的那个齿轮拣出来，用剪钳把后面凸起的地方剪掉找一只比轴的直径大一点的螺丝刀，给这个齿轮扩大一下内径，使之能在轴上自由转动 第三步，封死电位器在做这一步之前，我们必须先把舵机回到中位 找一块Arduino，打开IDE，给它来一段程序 12345678910//by Lin#include &lt;Servo.h&gt;Servo myservo;void setup() &#123; myservo.attach(9);//舵机连接Arduino的D9&#125;void loop() &#123; myservo.write(90); //让舵机回到中位&#125; 按图接上舵机，你会发现它一直在转。 把右边的轴来回转几圈，找到一个让电机停下来的位置（把这里的电位器调到中间的值 给电位器上胶，封死它。注意，这时候不要不小心把轴给转动了，如果这样，重新返回第三步。 第四步，组装把齿轮组装回去，注意不要弄错齿轮位置。把螺丝锁上，这样你就得到了一个360°连转舵机了。 第五步，调试换个程序 1234567891011121314151617#include &lt;Servo.h&gt;Servo myservo; int pos = 0;void setup() &#123; myservo.attach(9); &#125;void loop() &#123; for (pos = 0; pos &lt;= 180; pos += 1) &#123; // in steps of 1 degree myservo.write(pos); delay(15); &#125; for (pos = 180; pos &gt;= 0; pos -= 1) &#123; myservo.write(pos); delay(15); &#125;&#125; 效果：舵机加速—减速—反方向加速—减速…… 拓展其实，舵机的创意还挺多的比如，代替减速电机做个Arduino小车；给智能手环刷一下步数；还有这个：逆天的舵机创意]]></content>
       <categories>
         <category>科技</category>
@@ -188,7 +188,7 @@
   </entry>
   <entry>
     <title><![CDATA[整蛊小玩意]]></title>
-    <url>%2F2016%2F09%2F13%2F%E6%95%B4%E8%9B%8A%E5%B0%8F%E7%8E%A9%E6%84%8F%2F</url>
+    <url>%2F2016%2F09%2F13%2F%E7%A7%91%E6%8A%80%2F%E6%95%B4%E8%9B%8A%E5%B0%8F%E7%8E%A9%E6%84%8F%2F</url>
     <content type="text"><![CDATA[如题，这是一个一靠近就会发出奇怪的声音，而又很难被发现的小装置 成品图？没有。有空我会把它做出来 材料 人体红外热释电传感器（PIR） 蜂鸣器 (无源) Arduino 接线 Arduino sensors D2 PIR D3 Piezo 程序全都放在这 总结完？ 完。]]></content>
       <categories>
         <category>科技</category>
@@ -202,7 +202,7 @@
   </entry>
   <entry>
     <title><![CDATA[便携式测距仪]]></title>
-    <url>%2F2016%2F09%2F11%2F%E4%BE%BF%E6%90%BA%E5%BC%8F%E6%B5%8B%E8%B7%9D%E4%BB%AA%2F</url>
+    <url>%2F2016%2F09%2F11%2F%E7%A7%91%E6%8A%80%2F%E4%BE%BF%E6%90%BA%E5%BC%8F%E6%B5%8B%E8%B7%9D%E4%BB%AA%2F</url>
     <content type="text"><![CDATA[想要一块能固定在手腕上的测距的工具吗？ 来玩玩这个项目吧 首先，你需要： HC-SR04超声波测距模块 OLED显示屏 （这里用的是ISP类型的） Arduino nano 锂电池 按钮/开关 接线： Arduino OLED HC-SR04 D13 SCK/D0 D11 MOSI/D1 D10 CS/DC D9 RST D8 Echo D7 Trig 程序1234567891011121314151617181920212223242526272829303132#include&lt;U8glib.h&gt;U8GLIB_SSD1306_128X64 u8g(10, 9, 12, 11, 13);const int TrigPin = 7;const int EchoPin = 8;unsigned int distance;void setup() &#123; pinMode(TrigPin, OUTPUT); pinMode(EchoPin, INPUT); u8g.setColorIndex(1); &#125;void loop() &#123; digitalWrite(TrigPin, LOW); delayMicroseconds(2); digitalWrite(TrigPin, HIGH); delayMicroseconds(10); digitalWrite(TrigPin, LOW); distance = pulseIn(EchoPin, HIGH) / 58.00; u8g.firstPage(); do &#123; draw(); &#125; while ( u8g.nextPage() ); delay(100);&#125;void draw(void) &#123; u8g.setFont(u8g_font_ncenB24); u8g.drawStr( 80, 50, "cm"); u8g.setPrintPos(5, 50); u8g.print(distance);&#125; 总结这是个以前做过的项目，距今历史悠久，所以教程不是那么完整。请自己发挥想象，让它变得更可爱。有问题请在文章下面留言:D]]></content>
       <categories>
         <category>科技</category>
@@ -228,7 +228,7 @@
   </entry>
   <entry>
     <title><![CDATA[造个方舟反应炉]]></title>
-    <url>%2F2016%2F09%2F11%2F%E9%80%A0%E4%B8%AA%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89%2F</url>
+    <url>%2F2016%2F09%2F11%2F%E7%A7%91%E6%8A%80%2F%E9%80%A0%E4%B8%AA%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89%2F</url>
     <content type="text"><![CDATA[造一副自己的铁衣 这是一个非常长远的目标 作为钢铁侠的脑残粉 我决定先给自己造个方舟反应炉 首先，它长这样： 实现的功能： 阻止金属碎片进入心脏 （不可能） 提供强大的核反应能量 （想得美） 装装逼 （这个倒可以） 说了这么多，我们来看看它是怎样被造出来的吧 1.材料清单 一个环形LED模块 一块arduino板子 小小的锂电池 一个小开关（总不能一直亮着吧） 泡沫板 （用于把LED光线分散均匀） 硬纸板（做个后盖） 橡皮筋（方便挂在胸前） 2.把程序下载进arduino程序：源代码 实现的效果： 蓝色呼吸灯 开机有彩虹灯的特效 3.把主体打印出来模型文件放在这 4.组装1. 接线： LED模块 Arduino Din D6 VCC 5V GND GND 2. 到碗里来： 首先，把泡沫板切一个圆，直接压进去把Arduino和LED粘在上面电池可放里面，只是感觉空间太窄我直接把它外接出来 如果还剩空间可以把打印件剪薄几层，太厚了不好看 3. 封印：厚纸板上裁个圆，作为后盖 用502粘上为了紧固橡皮筋，我另外粘了些胶带 史上最丑的设计 #完成！ 另附：佩戴效果图 写在最后： 此方舟反应炉功能也许还不完善，我会慢慢加入 如果你有任何问题，或是有更好的建议，欢迎随时和我交流。]]></content>
       <categories>
         <category>科技</category>
@@ -237,8 +237,8 @@
         <tag>Arduino</tag>
         <tag>C++</tag>
         <tag>教程</tag>
-        <tag>3D打印</tag>
         <tag>作品</tag>
+        <tag>3D打印</tag>
       </tags>
   </entry>
   <entry>
