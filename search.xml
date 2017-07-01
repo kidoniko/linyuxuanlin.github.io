@@ -13,7 +13,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MacOS配置hexo一键更新]]></title>
+    <title><![CDATA[MacOS配置Hexo一键更新]]></title>
     <url>%2F2017%2F07%2F01%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[挖坑]]></content>
       <categories>
@@ -21,6 +21,7 @@
       </categories>
       <tags>
         <tag>技巧</tag>
+        <tag>Hexo</tag>
         <tag>MacOS</tag>
       </tags>
   </entry>
@@ -260,6 +261,7 @@
       </categories>
       <tags>
         <tag>文艺复兴</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
