@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="辐射工作站">
 <meta property="og:description" content="想要一块能固定在手腕上的测距的工具吗？ 来玩玩这个项目吧">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-bae0bb3941b7e245.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-06-30T14:26:39.000Z">
+<meta property="og:updated_time" content="2017-07-02T02:32:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="便携式测距仪">
 <meta name="twitter:description" content="想要一块能固定在手腕上的测距的工具吗？ 来玩玩这个项目吧">
@@ -442,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  206
+                  205
                 </span>
               
 
@@ -462,13 +462,28 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://upload-images.jianshu.io/upload_images/2218072-bae0bb3941b7e245.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" rel="gallery_cj4l1a2hr000m6ji74a6adcio"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://upload-images.jianshu.io/upload_images/2218072-bae0bb3941b7e245.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
         <blockquote>
 <p>想要一块能固定在手腕上的测距的工具吗？</p>
 <p>来玩玩这个项目吧</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-bae0bb3941b7e245.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="作品图.jpeg"></p>
 <a id="more"></a>
 <h3 id="首先，你需要："><a href="#首先，你需要：" class="headerlink" title="首先，你需要："></a>首先，你需要：</h3><ul>
 <li>HC-SR04超声波测距模块</li>
@@ -518,7 +533,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;U8glib.h&gt;</span></span></div><div class="line"><span class="function">U8GLIB_SSD1306_128X64 <span class="title">u8g</span><span class="params">(<span class="number">10</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">11</span>, <span class="number">13</span>)</span></span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> TrigPin = <span class="number">7</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> EchoPin = <span class="number">8</span>;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> distance;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  pinMode(TrigPin, OUTPUT);</div><div class="line">  pinMode(EchoPin, INPUT);</div><div class="line">  u8g.setColorIndex(<span class="number">1</span>);        </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  delayMicroseconds(<span class="number">2</span>);</div><div class="line">  digitalWrite(TrigPin, HIGH);</div><div class="line">  delayMicroseconds(<span class="number">10</span>);</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  distance = pulseIn(EchoPin, HIGH) / <span class="number">58.00</span>;</div><div class="line">  u8g.firstPage();</div><div class="line">  <span class="keyword">do</span> &#123;</div><div class="line">    draw();</div><div class="line">  &#125; <span class="keyword">while</span> ( u8g.nextPage() );</div><div class="line">  delay(<span class="number">100</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</div><div class="line">  u8g.setFont(u8g_font_ncenB24);</div><div class="line">  u8g.drawStr( <span class="number">80</span>, <span class="number">50</span>, <span class="string">"cm"</span>);</div><div class="line">  u8g.setPrintPos(<span class="number">5</span>, <span class="number">50</span>);</div><div class="line">  u8g.print(distance);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;U8glib.h&gt;</span></span></div><div class="line"><span class="function">U8GLIB_SSD1306_128X64 <span class="title">u8g</span><span class="params">(<span class="number">10</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">11</span>, <span class="number">13</span>)</span></span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> TrigPin = <span class="number">7</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> EchoPin = <span class="number">8</span>;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> distance;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  pinMode(TrigPin, OUTPUT);</div><div class="line">  pinMode(EchoPin, INPUT);</div><div class="line">  u8g.setColorIndex(<span class="number">1</span>);        </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  delayMicroseconds(<span class="number">2</span>);</div><div class="line">  digitalWrite(TrigPin, HIGH);</div><div class="line">  delayMicroseconds(<span class="number">10</span>);</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  distance = pulseIn(EchoPin, HIGH) / <span class="number">58.00</span>;</div><div class="line">  u8g.firstPage();</div><div class="line">  <span class="keyword">do</span> &#123;</div><div class="line">    draw();</div><div class="line">  &#125; <span class="keyword">while</span> ( u8g.nextPage() );</div><div class="line">  delay(<span class="number">100</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</div><div class="line">  u8g.setFont(u8g_font_ncenB24);</div><div class="line">  u8g.drawStr( <span class="number">80</span>, <span class="number">50</span>, <span class="string">"cm"</span>);</div><div class="line">  u8g.setPrintPos(<span class="number">5</span>, <span class="number">50</span>);</div><div class="line">  u8g.print(distance);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这是个以前做过的项目，距今历史悠久，所以教程不是那么完整。<br>请自己发挥想象，让它变得更可爱。<br>有问题请在文章下面留言:D</p>
 
       
