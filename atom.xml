@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-02T02:13:32.000Z</updated>
+  <updated>2017-07-02T02:17:01.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3D打印U盘-文件开源</title>
+    <link href="https://linyuxuanlin.github.io/2017/07/02/%E8%AE%BE%E8%AE%A1/3D%E6%89%93%E5%8D%B0U%E7%9B%98/"/>
+    <id>https://linyuxuanlin.github.io/2017/07/02/设计/3D打印U盘/</id>
+    <published>2017-07-01T18:18:32.000Z</published>
+    <updated>2017-07-02T02:17:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不久前的作品，所有设计文件放在<a href="https://github.com/linyuxuanlin/3D-print-USBDisk" target="_blank" rel="external">GitHub仓库</a>。当然如果你没有3D打印机的话，也可以跟我买，我会帮你设计+打印 :D</p>
+<a id="more"></a>
+<p>当然，U盘的芯片不可能是打印的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-223890fe7d2fb9ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="a"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不久前的作品，所有设计文件放在&lt;a href=&quot;https://github.com/linyuxuanlin/3D-print-USBDisk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub仓库&lt;/a&gt;。当然如果你没有3D打印机的话，也可以跟我买，我会帮你设计+打印 :D&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
+    
+      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>网站部署至coding.net</title>
@@ -178,35 +208,6 @@
       <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
     
       <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3D打印U盘-文件开源</title>
-    <link href="https://linyuxuanlin.github.io/2017/06/02/%E8%AE%BE%E8%AE%A1/3D%E6%89%93%E5%8D%B0U%E7%9B%98/"/>
-    <id>https://linyuxuanlin.github.io/2017/06/02/设计/3D打印U盘/</id>
-    <published>2017-06-01T18:18:32.000Z</published>
-    <updated>2017-07-02T01:57:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>不久前的作品，所有设计文件放在<a href="https://github.com/linyuxuanlin/3D-print-USBDisk" target="_blank" rel="external">GitHub仓库</a>。当然如果你没有3D打印机的话，也可以跟我买，我会帮你设计+打印 :D</p>
-<a id="more"></a>
-<p>当然，U盘的芯片不可能是打印的</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;不久前的作品，所有设计文件放在&lt;a href=&quot;https://github.com/linyuxuanlin/3D-print-USBDisk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub仓库&lt;/a&gt;。当然如果你没有3D打印机的话，也可以跟我买，我会帮你设计+打印 :D&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
-    
-      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
