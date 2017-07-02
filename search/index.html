@@ -113,17 +113,17 @@
 
 
 
-<meta name="description" content=".hl { color: red; } 12345678910111213141516171819202122232425$data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;">
+<meta name="description" content=".hl { color: red; } $data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;lt;h2&amp;gt;Search Results for: &amp;apos; . $_G">
 <meta name="keywords" content="未编辑">
 <meta property="og:type" content="website">
 <meta property="og:title" content="搜索结果">
 <meta property="og:url" content="https://linyuxuanlin.github.io/search/index.html">
 <meta property="og:site_name" content="辐射工作站">
-<meta property="og:description" content=".hl { color: red; } 12345678910111213141516171819202122232425$data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;">
+<meta property="og:description" content=".hl { color: red; } $data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;lt;h2&amp;gt;Search Results for: &amp;apos; . $_G">
 <meta property="og:updated_time" content="2016-10-03T04:12:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搜索结果">
-<meta name="twitter:description" content=".hl { color: red; } 12345678910111213141516171819202122232425$data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;">
+<meta name="twitter:description" content=".hl { color: red; } $data = simplexml_load_file(&amp;apos;search.xml&amp;apos;);define(LEN, 1000);echo &amp;apos;&amp;lt;div class=&amp;quot;article-inner article-entry&amp;quot;&amp;gt;&amp;lt;h2&amp;gt;Search Results for: &amp;apos; . $_G">
 
 
 
@@ -373,7 +373,7 @@
       <style type="text/css">.hl {
 color: red;
 }</style>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">$data = simplexml_load_file(&apos;search.xml&apos;);</div><div class="line">define(LEN, 1000);</div><div class="line"></div><div class="line">echo &apos;&lt;div class=&quot;article-inner article-entry&quot;&gt;&lt;h2&gt;Search Results for: &apos; . $_GET[&quot;s&quot;] . &apos;&lt;/h2&gt;&lt;/div&gt;&apos;;</div><div class="line"></div><div class="line">foreach($data-&gt;entry as $a) &#123;</div><div class="line">	// echo $a-&gt;title;</div><div class="line">// echo preg_replace(&quot;/http:\/\/(.*)\//&quot;,&quot;&lt;a href=\&quot;\$&#123;0&#125;\&quot;&gt;\$&#123;0&#125;&lt;/a&gt;&quot;,&quot;$a&quot;);</div><div class="line"></div><div class="line">	$pattern = &quot;/&quot; . $_GET[&quot;s&quot;] . &quot;/i&quot;;</div><div class="line">	$replace = &apos;&lt;span class=hl&gt;&apos; . $_GET[&quot;s&quot;] . &apos;&lt;/span&gt;&apos;;</div><div class="line">	// echo $pattern . &quot;&lt;BR&gt;&quot;;</div><div class="line">	// echo $replace . &quot;&lt;BR&gt;&quot;;</div><div class="line"></div><div class="line">	if(preg_match($pattern, $a-&gt;title)  or preg_match($pattern, $a-&gt;content)) &#123;</div><div class="line">		echo &apos;&lt;div class=&quot;article-inner article-entry&quot; itemprop=&quot;articleBody&quot;&gt;&lt;a href=&apos; . $a-&gt;url . &apos;&gt;&lt;h3&gt;&apos; . preg_replace($pattern, $replace, $a-&gt;title) . &apos;&lt;/h3&gt;&lt;/a&gt;&apos;;</div><div class="line">		$hl_keys = preg_replace($pattern, $replace, $a-&gt;content);</div><div class="line"></div><div class="line">		$strpos = stripos($a-&gt;content,  $_GET[&apos;s&apos;]);</div><div class="line">		$len = min(LEN, strlen($a-&gt;content) - $strpos - 1);</div><div class="line"></div><div class="line">		echo &apos;&lt;p&gt;&apos; . mb_strcut($hl_keys, $strpos, $len, &quot;utf-8&quot;) . &apos; &lt;span class=article-more-link&gt;&lt;a href=&apos;. $a-&gt;url .&apos;&gt; Detial&gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&apos;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$data = simplexml_load_file(&apos;search.xml&apos;);</div><div class="line">define(LEN, 1000);</div><div class="line"></div><div class="line">echo &apos;&lt;div class=&quot;article-inner article-entry&quot;&gt;&lt;h2&gt;Search Results for: &apos; . $_GET[&quot;s&quot;] . &apos;&lt;/h2&gt;&lt;/div&gt;&apos;;</div><div class="line"></div><div class="line">foreach($data-&gt;entry as $a) &#123;</div><div class="line">true// echo $a-&gt;title;</div><div class="line">// echo preg_replace(&quot;/http:\/\/(.*)\//&quot;,&quot;&lt;a href=\&quot;\$&#123;0&#125;\&quot;&gt;\$&#123;0&#125;&lt;/a&gt;&quot;,&quot;$a&quot;);</div><div class="line"></div><div class="line">true$pattern = &quot;/&quot; . $_GET[&quot;s&quot;] . &quot;/i&quot;;</div><div class="line">true$replace = &apos;&lt;span class=hl&gt;&apos; . $_GET[&quot;s&quot;] . &apos;&lt;/span&gt;&apos;;</div><div class="line">true// echo $pattern . &quot;&lt;BR&gt;&quot;;</div><div class="line">true// echo $replace . &quot;&lt;BR&gt;&quot;;</div><div class="line"></div><div class="line">trueif(preg_match($pattern, $a-&gt;title)  or preg_match($pattern, $a-&gt;content)) &#123;</div><div class="line">truetrueecho &apos;&lt;div class=&quot;article-inner article-entry&quot; itemprop=&quot;articleBody&quot;&gt;&lt;a href=&apos; . $a-&gt;url . &apos;&gt;&lt;h3&gt;&apos; . preg_replace($pattern, $replace, $a-&gt;title) . &apos;&lt;/h3&gt;&lt;/a&gt;&apos;;</div><div class="line">truetrue$hl_keys = preg_replace($pattern, $replace, $a-&gt;content);</div><div class="line"></div><div class="line">truetrue$strpos = stripos($a-&gt;content,  $_GET[&apos;s&apos;]);</div><div class="line">truetrue$len = min(LEN, strlen($a-&gt;content) - $strpos - 1);</div><div class="line"></div><div class="line">truetrueecho &apos;&lt;p&gt;&apos; . mb_strcut($hl_keys, $strpos, $len, &quot;utf-8&quot;) . &apos; &lt;span class=article-more-link&gt;&lt;a href=&apos;. $a-&gt;url .&apos;&gt; Detial&gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&apos;;</div><div class="line">true&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
     
   </div>
@@ -430,7 +430,7 @@ color: red;
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -441,7 +441,7 @@ color: red;
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
