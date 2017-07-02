@@ -12,8 +12,8 @@ html, body {
 	height: 130%;
 	overflow: hidden;
 	
-	background: #eee;
-	color: #eee;
+	background: rgba(0,0,0,0);
+	color: rgba(0,0,0,0);
 	
 	font-family: 'Molengo', Arial, Helvetica, sans-serif;
 }
@@ -24,7 +24,7 @@ html, body {
  *********************************************/
 
 a {
-	color: rgb(220,200,150);
+	color: rgb(0,0,0);
 }
 
 header {
@@ -34,7 +34,7 @@ header {
 	height: 20px;
 	width: 100%;
 	
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0);
 }
 
 header>div {
