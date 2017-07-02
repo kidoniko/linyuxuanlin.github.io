@@ -12,8 +12,8 @@ html, body {
 	height: 130%;
 	overflow: hidden;
 	
-	background: rgba(0,0,0,0);
-	color: rgba(0,0,0,0);
+	background: #000;
+	color: #000;
 	
 	font-family: 'Molengo', Arial, Helvetica, sans-serif;
 }
