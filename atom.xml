@@ -92,10 +92,10 @@
   
   <entry>
     <title>MacOS配置Hexo一键更新</title>
-    <link href="https://linyuxuanlin.github.io/2017/07/01/%E6%8A%80%E5%B7%A7/%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/"/>
-    <id>https://linyuxuanlin.github.io/2017/07/01/技巧/配置hexo一键更新流程/</id>
-    <published>2017-07-01T12:59:04.000Z</published>
-    <updated>2017-07-02T02:30:49.000Z</updated>
+    <link href="https://linyuxuanlin.github.io/2017/06/30/%E6%8A%80%E5%B7%A7/%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B/"/>
+    <id>https://linyuxuanlin.github.io/2017/06/30/技巧/配置hexo一键更新流程/</id>
+    <published>2017-06-30T14:29:10.000Z</published>
+    <updated>2017-07-05T13:19:25.000Z</updated>
     
     <content type="html"><![CDATA[<p>众所周知，在Pages上写文章，写完之了后，需要在git命令行先生成，再部署。<br>缩减版的指令是这样的：<br><figure class="highlight ebnf"><table><tr><td class="code"><pre><div class="line"><span class="attribute">hexo g</span></div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
 <p>再缩减，成了这样：</p>

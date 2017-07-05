@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title><![CDATA[MacOS配置Hexo一键更新]]></title>
-    <url>%2F2017%2F07%2F01%2F%E6%8A%80%E5%B7%A7%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
+    <url>%2F2017%2F06%2F30%2F%E6%8A%80%E5%B7%A7%2F%E9%85%8D%E7%BD%AEhexo%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[众所周知，在Pages上写文章，写完之了后，需要在git命令行先生成，再部署。缩减版的指令是这样的：hexo ghexo d 再缩减，成了这样： hexo d -g 可是我们还想偷懒！有没有更简单的方法呢？ MacOS下有个神一般的应用，叫Automator，最近很流行的workflow就是由这个来的。 它能然你自定义工作流程，以完成一些重复而无脑的操作。 本文以一键更新Hexo为例，简略介绍一下Automator的用法。 一键更新Hexo打开终端类因为我用的是iTerm，所以下图直接打开它，如果是别的终端就选那个 控制键盘输入hexo d -g找到执行AppleScript，把以下代码复制进框里：on run &#123;input, parameters&#125;true--trueset timeoutSeconds to 0trueset uiScript to "keystroke \"hexo d -g\" " --Mark，注意这行代码truemy doWithTimeout(uiScript, timeoutSeconds) return inputend runon doWithTimeout(uiScript, timeoutSeconds)trueset endDate to (current date) + timeoutSecondstruerepeattruetruetrytruetruetruerun script "tell application \"System Events\"" &amp; uiScript &amp; "end tell"truetruetrueexit repeattruetrueon error errorMessagetruetruetrueif ((current date) &gt; endDate) thentruetruetruetrueerror "Can not " &amp; uiScripttruetruetrueend iftruetrueend trytrueend repeatend doWithTimeout 完成！先打开终端，输入cd 博客位置(这一操作不自动，因为只需要重复一次)。单击运行按钮或者cmd+R，自动生成&amp;部署成功！ 拓展并不只有这个玩法，你也可以加一句hexo s进去试试，或者尝试别的玩法。只有你想不到，没有Automator做不到的~]]></content>
       <categories>
         <category>技巧</category>
