@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-05T13:22:43.000Z</updated>
+  <updated>2017-07-05T13:24:05.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://linyuxuanlin.github.io/2017/07/05/test2/"/>
+    <id>https://linyuxuanlin.github.io/2017/07/05/test2/</id>
+    <published>2017-07-05T13:24:04.000Z</published>
+    <updated>2017-07-05T13:24:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>123123</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;123123&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
+    
+      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>test</title>
@@ -923,30 +951,6 @@
       <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown学习笔记</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/11/%E6%8A%80%E5%B7%A7/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/11/技巧/Markdown学习笔记/</id>
-    <published>2016-09-11T03:08:41.000Z</published>
-    <updated>2017-07-02T02:31:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="另附-中文参考"><a href="#另附-中文参考" class="headerlink" title="另附 中文参考"></a>另附 <a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">中文参考</a></h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;另附-中文参考&quot;&gt;&lt;a href=&quot;#另附-中文参考&quot; class=&quot;headerlink&quot; title=&quot;另附 中文参考&quot;&gt;&lt;/a&gt;另附 &lt;a href=&quot;http://wowubuntu.com/markdown/#list&quot; target=&quot;_blank&quot; 
-    
-    </summary>
-    
-      <category term="技巧" scheme="https://linyuxuanlin.github.io/categories/%E6%8A%80%E5%B7%A7/"/>
-    
-    
-      <category term="Markdown" scheme="https://linyuxuanlin.github.io/tags/Markdown/"/>
-    
-      <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   

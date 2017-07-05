@@ -2,6 +2,19 @@
 <search>
   <entry>
     <title><![CDATA[test]]></title>
+    <url>%2F2017%2F07%2F05%2Ftest2%2F</url>
+    <content type="text"><![CDATA[123123]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>3D打印</tag>
+        <tag>作品</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[test]]></title>
     <url>%2F2017%2F07%2F04%2Ftest%2F</url>
     <content type="text"><![CDATA[123123]]></content>
       <categories>
