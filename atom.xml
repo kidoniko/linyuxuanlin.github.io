@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-02T02:51:26.000Z</updated>
+  <updated>2017-07-05T13:22:43.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://linyuxuanlin.github.io/2017/07/04/test/"/>
+    <id>https://linyuxuanlin.github.io/2017/07/04/test/</id>
+    <published>2017-07-03T18:18:32.000Z</published>
+    <updated>2017-07-05T13:22:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>123123</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;123123&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
+    
+      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>3D打印U盘-文件开源</title>
@@ -622,6 +650,46 @@
   </entry>
   
   <entry>
+    <title>淘汰人的从来都是工具，不是年龄</title>
+    <link href="https://linyuxuanlin.github.io/2016/09/14/%E8%A7%82%E7%82%B9/%E6%B7%98%E6%B1%B0%E4%BA%BA%E7%9A%84%E4%BB%8E%E6%9D%A5%E9%83%BD%E6%98%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8D%E6%98%AF%E5%B9%B4%E9%BE%84/"/>
+    <id>https://linyuxuanlin.github.io/2016/09/14/观点/淘汰人的从来都是工具，不是年龄/</id>
+    <published>2016-09-14T02:54:04.000Z</published>
+    <updated>2017-07-02T02:30:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。<br>一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。</p>
+</blockquote>
+<a id="more"></a>
+<p>在新的工具面前，一切价值被重构，包括时间的意义和对能力的定义.</p>
+<p>每一次工具革命发生的时候，原有生态链中既得利益者往往无法适应，他们的思维和运作体系已在原有的工具系统中形成惯性，在犹豫和恐惧中，新的竞争者已经刀逼颈部。</p>
+<p><strong>Lin的观点：</strong></p>
+<blockquote>
+<p>不禁想起《三体》中的”技术爆炸”</p>
+<blockquote>
+<p>“人类从狩猎时代到农业时代，用了十几万个地球年时间；从农业时代到工业时代用了几千地球年；而由工业时代到原子时代，只用了二百地球年；之后，仅用了几十个地球年，人类就进入了信息时代。”</p>
+</blockquote>
+<p>在现代社会，人类的科技呈<strong>指数型</strong>发展。这个时代的工具衰老速度一定快于人的年龄的衰老。所以，我们要增强自己的适应能力，用积极的心态去接受不断更新的工具</p>
+</blockquote>
+<p><code>观点：by吴晓波
+改编：我</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。&lt;br&gt;一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="观点" scheme="https://linyuxuanlin.github.io/categories/%E8%A7%82%E7%82%B9/"/>
+    
+    
+      <category term="观点" scheme="https://linyuxuanlin.github.io/tags/%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>灵感并不那么值钱</title>
     <link href="https://linyuxuanlin.github.io/2016/09/14/%E8%A7%82%E7%82%B9/%E7%81%B5%E6%84%9F%E5%B9%B6%E4%B8%8D%E9%82%A3%E4%B9%88%E5%80%BC%E9%92%B1/"/>
     <id>https://linyuxuanlin.github.io/2016/09/14/观点/灵感并不那么值钱/</id>
@@ -659,46 +727,6 @@
 &lt;li&gt;想法越离奇越有价值&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;但真正的创造性思维不是这样的。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="观点" scheme="https://linyuxuanlin.github.io/categories/%E8%A7%82%E7%82%B9/"/>
-    
-    
-      <category term="观点" scheme="https://linyuxuanlin.github.io/tags/%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>淘汰人的从来都是工具，不是年龄</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/14/%E8%A7%82%E7%82%B9/%E6%B7%98%E6%B1%B0%E4%BA%BA%E7%9A%84%E4%BB%8E%E6%9D%A5%E9%83%BD%E6%98%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8D%E6%98%AF%E5%B9%B4%E9%BE%84/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/14/观点/淘汰人的从来都是工具，不是年龄/</id>
-    <published>2016-09-14T02:54:04.000Z</published>
-    <updated>2017-07-02T02:30:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。<br>一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。</p>
-</blockquote>
-<a id="more"></a>
-<p>在新的工具面前，一切价值被重构，包括时间的意义和对能力的定义.</p>
-<p>每一次工具革命发生的时候，原有生态链中既得利益者往往无法适应，他们的思维和运作体系已在原有的工具系统中形成惯性，在犹豫和恐惧中，新的竞争者已经刀逼颈部。</p>
-<p><strong>Lin的观点：</strong></p>
-<blockquote>
-<p>不禁想起《三体》中的”技术爆炸”</p>
-<blockquote>
-<p>“人类从狩猎时代到农业时代，用了十几万个地球年时间；从农业时代到工业时代用了几千地球年；而由工业时代到原子时代，只用了二百地球年；之后，仅用了几十个地球年，人类就进入了信息时代。”</p>
-</blockquote>
-<p>在现代社会，人类的科技呈<strong>指数型</strong>发展。这个时代的工具衰老速度一定快于人的年龄的衰老。所以，我们要增强自己的适应能力，用积极的心态去接受不断更新的工具</p>
-</blockquote>
-<p><code>观点：by吴晓波
-改编：我</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;汽车淘汰马车，不是因为马匹不够强壮，而是因为工具的革命性迭代。&lt;br&gt;一代人是怎么淘汰上一代人的？并不是因为更勤奋，更聪明，而是更乐于接受新的工具。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -919,120 +947,6 @@
       <category term="Markdown" scheme="https://linyuxuanlin.github.io/tags/Markdown/"/>
     
       <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>造个方舟反应炉</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/11/%E7%A7%91%E6%8A%80/%E9%80%A0%E4%B8%AA%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/11/科技/造个方舟反应炉/</id>
-    <published>2016-09-11T01:47:42.000Z</published>
-    <updated>2017-07-02T02:34:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>造一副自己的铁衣</p>
-<p>这是一个非常长远的目标</p>
-<p>作为钢铁侠的脑残粉</p>
-<p>我决定先给自己造个<strong>方舟反应炉</strong></p>
-</blockquote>
-<a id="more"></a>
-<h4 id="实现的功能："><a href="#实现的功能：" class="headerlink" title="实现的功能："></a>实现的功能：</h4><ul>
-<li>阻止金属碎片进入心脏                 （不可能）</li>
-<li>提供强大的核反应能量                 （想得美）</li>
-<li>装装逼 （这个倒可以）</li>
-</ul>
-<p>说了这么多，我们来看看它是怎样被造出来的吧</p>
-<h1 id="1-材料清单"><a href="#1-材料清单" class="headerlink" title="1.材料清单"></a>1.材料清单</h1><ul>
-<li>一个环形LED模块</li>
-<li>一块arduino板子</li>
-<li>小小的锂电池</li>
-<li>一个小开关（总不能一直亮着吧）</li>
-<li>泡沫板 （用于把LED光线分散均匀）</li>
-<li>硬纸板（做个后盖）</li>
-<li>橡皮筋（方便挂在胸前）</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-217cccba14da0c21.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="16位圆形全彩 LED模块.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-d5449fa211109a5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="arduino pro mini.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-b991bf877592d720.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="锂电池.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-9c9c86edcc8f0ccc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="泡沫板.jpg"></p>
-<h1 id="2-把程序下载进arduino"><a href="#2-把程序下载进arduino" class="headerlink" title="2.把程序下载进arduino"></a>2.把程序下载进arduino</h1><p>程序：<a href="https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89" target="_blank" rel="external">源代码</a></p>
-<h5 id="实现的效果："><a href="#实现的效果：" class="headerlink" title="实现的效果："></a>实现的效果：</h5><ul>
-<li>蓝色呼吸灯</li>
-<li>开机有彩虹灯的特效</li>
-</ul>
-<h1 id="3-把主体打印出来"><a href="#3-把主体打印出来" class="headerlink" title="3.把主体打印出来"></a>3.把主体打印出来</h1><p>模型文件放在<a href="https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89/3D%E6%A8%A1%E5%9E%8B" target="_blank" rel="external">这</a><br><img src="http://upload-images.jianshu.io/upload_images/2218072-6c6e24325bcc8a0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="模型.png"></p>
-<h1 id="4-组装"><a href="#4-组装" class="headerlink" title="4.组装"></a>4.组装</h1><p><strong>1. 接线：</strong></p>
-<table>
-<thead>
-<tr>
-<th>LED模块</th>
-<th>Arduino</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Din</td>
-<td>D6</td>
-</tr>
-<tr>
-<td>VCC</td>
-<td>5V</td>
-</tr>
-<tr>
-<td>GND</td>
-<td>GND</td>
-</tr>
-</tbody>
-</table>
-<p><strong>2. 到碗里来：</strong></p>
-<p>首先，把泡沫板切一个圆，直接压进去<br>把Arduino和LED粘在上面<br>电池可放里面，只是感觉空间太窄我直接把它外接出来<br><img src="http://upload-images.jianshu.io/upload_images/2218072-f14454e6e81c19e5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="装载.jpg"></p>
-<blockquote>
-<p>如果还剩空间可以把打印件剪薄几层，太厚了不好看</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-f87f8656f1cc39bc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="残暴.jpg"></p>
-</blockquote>
-<p><strong>3. 封印：</strong><br>厚纸板上裁个圆，作为后盖</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-20bcbbf2c6ff4a8f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="后盖"></p>
-<p>用502粘上<br>为了紧固橡皮筋，我另外粘了些胶带</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-f800fa338b716caf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="222029ed8eeayybeebgw38.jpg"></p>
-<blockquote>
-<p>史上最丑的设计</p>
-</blockquote>
-<p>#完成！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1a0cacb13594119e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="反应炉"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-4fe3e0c31c14d146.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="反应炉"></p>
-<hr>
-<p>另附：佩戴效果图</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-c97e599be57aeffa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=":D"></p>
-<p>写在最后：</p>
-<ul>
-<li>此方舟反应炉功能也许还不完善，我会慢慢加入</li>
-<li>如果你有任何问题，或是有更好的建议，欢迎随时和我交流。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;造一副自己的铁衣&lt;/p&gt;
-&lt;p&gt;这是一个非常长远的目标&lt;/p&gt;
-&lt;p&gt;作为钢铁侠的脑残粉&lt;/p&gt;
-&lt;p&gt;我决定先给自己造个&lt;strong&gt;方舟反应炉&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="科技" scheme="https://linyuxuanlin.github.io/categories/%E7%A7%91%E6%8A%80/"/>
-    
-    
-      <category term="Arduino" scheme="https://linyuxuanlin.github.io/tags/Arduino/"/>
-    
-      <category term="C++" scheme="https://linyuxuanlin.github.io/tags/C/"/>
-    
-      <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
-    
-      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
     
   </entry>
   
