@@ -17,8 +17,8 @@
   
   <entry>
     <title>1</title>
-    <link href="https://linyuxuanlin.github.io/2017/07/07/%E6%B4%BB%E5%8A%A8/Hack.init()+%E9%87%8D%E5%BA%86%E7%A7%91%E5%AD%A6%E8%90%A52/"/>
-    <id>https://linyuxuanlin.github.io/2017/07/07/活动/Hack.init()+重庆科学营2/</id>
+    <link href="https://linyuxuanlin.github.io/2017/07/07/%E6%B4%BB%E5%8A%A8/Hack.init()+%E9%87%8D%E5%BA%86%E7%A7%91%E5%AD%A6%E8%90%A5/"/>
+    <id>https://linyuxuanlin.github.io/2017/07/07/活动/Hack.init()+重庆科学营/</id>
     <published>2017-07-06T17:06:42.000Z</published>
     <updated>2017-07-06T17:07:37.000Z</updated>
     
@@ -780,40 +780,6 @@
   </entry>
   
   <entry>
-    <title>Hack.init()+重庆科学营</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/13/%E6%B4%BB%E5%8A%A8/Hack.init()+%E9%87%8D%E5%BA%86%E7%A7%91%E5%AD%A6%E8%90%A5/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/13/活动/Hack.init()+重庆科学营/</id>
-    <published>2016-09-13T12:11:47.000Z</published>
-    <updated>2017-07-06T17:05:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/2218072-45631e578f1ebdba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3239776488D4A9377DC6B070C498BCF4.jpg"><br>Hack.init()+重庆科学营 日程记录</p>
-<a id="more"></a>
-<h1 id="July-6th"><a href="#July-6th" class="headerlink" title="July 6th"></a>July 6th</h1><p><img src="http://upload-images.jianshu.io/upload_images/2218072-5cb0d1f2b8b32f3c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20170706_175331_HDR-01.jpeg"></p>
-<p>下午5点坐滴滴来到机场，发现航班取消了(到机场才收到通知)。。。<br>那就改签吧，居然赶上提前的航班<br>想想也是幸运，飞机上剩下最后的3个位子，刚好被我们订到，当然只能是最后一排。。。<br>于是，就上飞机了~</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-f4d9631536a5f4fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20170707_003441.jpg"></p>
-<p>中间多了个舟山经停：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1b8e102033508fdf.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IMG_20170706_210351_HHT-01.jpeg"></p>
-<p>3个小时后，终于到上海了。。。<br>加上等待的时间，飞机的速度可能还不如高铁。</p>
-<p>上海到了~</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-b820ac9dde2ff32b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3239776488D4A9377DC6B070C498BCF4.jpg"><br>只不过，航班改签把着陆的机场也改了<br>原来订的青年旅馆只能作废，改订浦东机场旁边的锦江之星<br>还好酒店有免费的接机。。。</p>
-<p>第0天还是挺顺利的，可以用<code>歪打正着</code>来形容，只不过多花了点钱而已~</p>
-<hr>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2218072-45631e578f1ebdba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;3239776488D4A9377DC6B070C498BCF4.jpg&quot;&gt;&lt;br&gt;Hack.init()+重庆科学营 日程记录&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="活动" scheme="https://linyuxuanlin.github.io/categories/%E6%B4%BB%E5%8A%A8/"/>
-    
-    
-      <category term="活动" scheme="https://linyuxuanlin.github.io/tags/%E6%B4%BB%E5%8A%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>整蛊小玩意</title>
     <link href="https://linyuxuanlin.github.io/2016/09/13/%E7%A7%91%E6%8A%80/%E6%95%B4%E8%9B%8A%E5%B0%8F%E7%8E%A9%E6%84%8F/"/>
     <id>https://linyuxuanlin.github.io/2016/09/13/科技/整蛊小玩意/</id>
@@ -963,6 +929,30 @@
       <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown学习笔记</title>
+    <link href="https://linyuxuanlin.github.io/2016/09/11/%E6%8A%80%E5%B7%A7/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://linyuxuanlin.github.io/2016/09/11/技巧/Markdown学习笔记/</id>
+    <published>2016-09-11T03:08:41.000Z</published>
+    <updated>2017-07-02T02:31:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="另附-中文参考"><a href="#另附-中文参考" class="headerlink" title="另附 中文参考"></a>另附 <a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">中文参考</a></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;另附-中文参考&quot;&gt;&lt;a href=&quot;#另附-中文参考&quot; class=&quot;headerlink&quot; title=&quot;另附 中文参考&quot;&gt;&lt;/a&gt;另附 &lt;a href=&quot;http://wowubuntu.com/markdown/#list&quot; target=&quot;_blank&quot; 
+    
+    </summary>
+    
+      <category term="技巧" scheme="https://linyuxuanlin.github.io/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Markdown" scheme="https://linyuxuanlin.github.io/tags/Markdown/"/>
+    
+      <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
