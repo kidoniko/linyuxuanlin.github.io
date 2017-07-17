@@ -166,6 +166,37 @@
   </entry>
   
   <entry>
+    <title>名片设计</title>
+    <link href="https://linyuxuanlin.github.io/2017/06/30/%E8%AE%BE%E8%AE%A1/%E5%90%8D%E7%89%87%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://linyuxuanlin.github.io/2017/06/30/设计/名片设计/</id>
+    <published>2017-06-30T14:14:06.000Z</published>
+    <updated>2017-07-17T07:49:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="↑最终效果↑"><a href="#↑最终效果↑" class="headerlink" title="↑最终效果↑"></a>↑最终效果↑</h3><p>（排球赛纪念）</p>
+<p>详细文件见GitHub仓库：<a href="https://github.com/linyuxuanlin/T-shirt-of-class" target="_blank" rel="external">https://github.com/linyuxuanlin/T-shirt-of-class</a></p>
+<a id="more"></a>
+<h3 id="正面"><a href="#正面" class="headerlink" title="正面"></a>正面</h3><p><img src="http://upload-images.jianshu.io/upload_images/2218072-b65d6139577a133d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="衣服效果图.001.png"></p>
+<h3 id="背面"><a href="#背面" class="headerlink" title="背面"></a>背面</h3><p><img src="http://upload-images.jianshu.io/upload_images/2218072-f42769418e6a2674.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="衣服效果图.004.png"></p>
+<p><em>注：”Linyx” 仅做参照</em></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;↑最终效果↑&quot;&gt;&lt;a href=&quot;#↑最终效果↑&quot; class=&quot;headerlink&quot; title=&quot;↑最终效果↑&quot;&gt;&lt;/a&gt;↑最终效果↑&lt;/h3&gt;&lt;p&gt;（排球赛纪念）&lt;/p&gt;
+&lt;p&gt;详细文件见GitHub仓库：&lt;a href=&quot;https://github.com/linyuxuanlin/T-shirt-of-class&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/linyuxuanlin/T-shirt-of-class&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
+    
+      <category term="设计" scheme="https://linyuxuanlin.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>T-Clock</title>
     <link href="https://linyuxuanlin.github.io/2017/06/25/%E7%A7%91%E6%8A%80/T-Clock/"/>
     <id>https://linyuxuanlin.github.io/2017/06/25/科技/T-Clock/</id>
@@ -919,120 +950,6 @@
       <category term="Markdown" scheme="https://linyuxuanlin.github.io/tags/Markdown/"/>
     
       <category term="技巧" scheme="https://linyuxuanlin.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>造个方舟反应炉</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/11/%E7%A7%91%E6%8A%80/%E9%80%A0%E4%B8%AA%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/11/科技/造个方舟反应炉/</id>
-    <published>2016-09-11T01:47:42.000Z</published>
-    <updated>2017-07-02T02:34:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>造一副自己的铁衣</p>
-<p>这是一个非常长远的目标</p>
-<p>作为钢铁侠的脑残粉</p>
-<p>我决定先给自己造个<strong>方舟反应炉</strong></p>
-</blockquote>
-<a id="more"></a>
-<h4 id="实现的功能："><a href="#实现的功能：" class="headerlink" title="实现的功能："></a>实现的功能：</h4><ul>
-<li>阻止金属碎片进入心脏                 （不可能）</li>
-<li>提供强大的核反应能量                 （想得美）</li>
-<li>装装逼 （这个倒可以）</li>
-</ul>
-<p>说了这么多，我们来看看它是怎样被造出来的吧</p>
-<h1 id="1-材料清单"><a href="#1-材料清单" class="headerlink" title="1.材料清单"></a>1.材料清单</h1><ul>
-<li>一个环形LED模块</li>
-<li>一块arduino板子</li>
-<li>小小的锂电池</li>
-<li>一个小开关（总不能一直亮着吧）</li>
-<li>泡沫板 （用于把LED光线分散均匀）</li>
-<li>硬纸板（做个后盖）</li>
-<li>橡皮筋（方便挂在胸前）</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-217cccba14da0c21.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="16位圆形全彩 LED模块.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-d5449fa211109a5d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="arduino pro mini.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-b991bf877592d720.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="锂电池.jpg"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-9c9c86edcc8f0ccc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="泡沫板.jpg"></p>
-<h1 id="2-把程序下载进arduino"><a href="#2-把程序下载进arduino" class="headerlink" title="2.把程序下载进arduino"></a>2.把程序下载进arduino</h1><p>程序：<a href="https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89" target="_blank" rel="external">源代码</a></p>
-<h5 id="实现的效果："><a href="#实现的效果：" class="headerlink" title="实现的效果："></a>实现的效果：</h5><ul>
-<li>蓝色呼吸灯</li>
-<li>开机有彩虹灯的特效</li>
-</ul>
-<h1 id="3-把主体打印出来"><a href="#3-把主体打印出来" class="headerlink" title="3.把主体打印出来"></a>3.把主体打印出来</h1><p>模型文件放在<a href="https://github.com/linyuxuanlin/My-Arduino-projects/tree/master/%E6%96%B9%E8%88%9F%E5%8F%8D%E5%BA%94%E7%82%89/3D%E6%A8%A1%E5%9E%8B" target="_blank" rel="external">这</a><br><img src="http://upload-images.jianshu.io/upload_images/2218072-6c6e24325bcc8a0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="模型.png"></p>
-<h1 id="4-组装"><a href="#4-组装" class="headerlink" title="4.组装"></a>4.组装</h1><p><strong>1. 接线：</strong></p>
-<table>
-<thead>
-<tr>
-<th>LED模块</th>
-<th>Arduino</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Din</td>
-<td>D6</td>
-</tr>
-<tr>
-<td>VCC</td>
-<td>5V</td>
-</tr>
-<tr>
-<td>GND</td>
-<td>GND</td>
-</tr>
-</tbody>
-</table>
-<p><strong>2. 到碗里来：</strong></p>
-<p>首先，把泡沫板切一个圆，直接压进去<br>把Arduino和LED粘在上面<br>电池可放里面，只是感觉空间太窄我直接把它外接出来<br><img src="http://upload-images.jianshu.io/upload_images/2218072-f14454e6e81c19e5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="装载.jpg"></p>
-<blockquote>
-<p>如果还剩空间可以把打印件剪薄几层，太厚了不好看</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-f87f8656f1cc39bc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="残暴.jpg"></p>
-</blockquote>
-<p><strong>3. 封印：</strong><br>厚纸板上裁个圆，作为后盖</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-20bcbbf2c6ff4a8f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="后盖"></p>
-<p>用502粘上<br>为了紧固橡皮筋，我另外粘了些胶带</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-f800fa338b716caf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="222029ed8eeayybeebgw38.jpg"></p>
-<blockquote>
-<p>史上最丑的设计</p>
-</blockquote>
-<p>#完成！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-1a0cacb13594119e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="反应炉"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-4fe3e0c31c14d146.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="反应炉"></p>
-<hr>
-<p>另附：佩戴效果图</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2218072-c97e599be57aeffa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=":D"></p>
-<p>写在最后：</p>
-<ul>
-<li>此方舟反应炉功能也许还不完善，我会慢慢加入</li>
-<li>如果你有任何问题，或是有更好的建议，欢迎随时和我交流。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;造一副自己的铁衣&lt;/p&gt;
-&lt;p&gt;这是一个非常长远的目标&lt;/p&gt;
-&lt;p&gt;作为钢铁侠的脑残粉&lt;/p&gt;
-&lt;p&gt;我决定先给自己造个&lt;strong&gt;方舟反应炉&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="科技" scheme="https://linyuxuanlin.github.io/categories/%E7%A7%91%E6%8A%80/"/>
-    
-    
-      <category term="Arduino" scheme="https://linyuxuanlin.github.io/tags/Arduino/"/>
-    
-      <category term="C++" scheme="https://linyuxuanlin.github.io/tags/C/"/>
-    
-      <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="3D打印" scheme="https://linyuxuanlin.github.io/tags/3D%E6%89%93%E5%8D%B0/"/>
-    
-      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
     
   </entry>
   
