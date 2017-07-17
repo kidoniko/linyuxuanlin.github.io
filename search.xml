@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Wight]]></title>
+    <url>%2F2017%2F07%2F17%2F%E7%A7%91%E6%8A%80%2FWight%2F</url>
+    <content type="text"><![CDATA[这是在hack.init()中做出来的撸代码、3D建模、调试各种乱七八糟的bug、等待打印、展示&amp;演讲，花了20多个小时欲了解更多，请展开下文~ 简介简单介绍一下，这个项目主要是用于乡村偏远地区的路灯照明系统，模型有点抽象，但其实它是一杆路灯。。。 项目的创新点： 太阳能供电。自给自足（经查阅详细资料，太阳能发电量足以点亮LED） 去线缆化。为偏远山区不方便铺线缆提供便利 智能算法。检测到夜晚，自动开灯；检测到人或车辆经过，提高LED亮度 云平台统一控制。用的是GSM主控，可以批量远程调试 拓展性。对个别有自定义照明需求的特殊用户提供各种自定义的功能 代码基于intorobot的云平台，已开源： 代码 模型用的是123D建模。tips：熟悉快捷键的话，建模速度会很快~因为现场时间不够，随便画了一个总的模型分底座，顶部和中间的部分然后打印出来模型 专属logo]]></content>
+      <categories>
+        <category>科技</category>
+      </categories>
+      <tags>
+        <tag>Arduino</tag>
+        <tag>C++</tag>
+        <tag>教程</tag>
+        <tag>3D打印</tag>
+        <tag>作品</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[名片设计]]></title>
     <url>%2F2017%2F07%2F17%2F%E8%AE%BE%E8%AE%A1%2F%E5%90%8D%E7%89%87%E8%AE%BE%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[↑正面&amp;背面↑印了几百张，最终还是有发出去几张的….搞笑的是，遇到推销的人要让我关注他的公众号，我直接递给他我的名片：“麻烦您先关注一下我的公众号和网站吧，然后我们再仔细谈谈”一句话打发走。感觉那个人内心是崩溃的]]></content>
