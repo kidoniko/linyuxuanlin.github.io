@@ -128,7 +128,7 @@
 <meta property="og:site_name" content="辐射工作站">
 <meta property="og:description" content="在这纷纷扰扰的世界里，与其临渊羡鱼，不如退而结网。每个人都有一张属于自己的网，织好自己的一张就够了。 成就2017.07 优胜奖 ,青少年高校科学营智创荟活动(重庆大学)2017.07 优秀营员 ,青少年高校科学营(重庆大学)2017.06 科技类个人三等奖 ,潮汕星河奖2017.03 二等奖 ,第32届广东省青少年科技创新大赛2017.02 专利申请 ,智能家居专利2016.12 一等奖 ,广东">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2218072-7efe908184a10768.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-07-20T11:41:48.000Z">
+<meta property="og:updated_time" content="2017-07-20T11:47:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于">
 <meta name="twitter:description" content="在这纷纷扰扰的世界里，与其临渊羡鱼，不如退而结网。每个人都有一张属于自己的网，织好自己的一张就够了。 成就2017.07 优胜奖 ,青少年高校科学营智创荟活动(重庆大学)2017.07 优秀营员 ,青少年高校科学营(重庆大学)2017.06 科技类个人三等奖 ,潮汕星河奖2017.03 二等奖 ,第32届广东省青少年科技创新大赛2017.02 专利申请 ,智能家居专利2016.12 一等奖 ,广东">
@@ -385,11 +385,45 @@
 <h3 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h3><p><a href="https://github.com/linyuxuanlin" target="_blank" rel="external">GitHub</a>: <code>linyuxuanlin</code><br>QQ:  <code>824676271</code><br>mail:  <code>linyuxuanlin52@gmail.com</code><br>WeChat:  <code>linyuxuanlin</code></p>
 <p>↓或扫二维码↓</p>
 <p>  <img src="http://upload-images.jianshu.io/upload_images/2218072-7efe908184a10768.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2218072-fd1df129ab3ea44d.jpg"></p>
-<p>  const myTheme = {<br>    render(state, instance) {<br>      const container = document.createElement(‘div’)<br>      container.lang = “en-US”<br>      container.className = ‘gitment-container gitment-root-container’<br>      container.appendChild(instance.renderHeader(state, instance))<br>      container.appendChild(instance.renderEditor(state, instance))<br>      container.appendChild(instance.renderComments(state, instance))<br>      container.appendChild(instance.renderFooter(state, instance))<br>      return container<br>    },<br>  }<br>  const gitment = new Gitment({<br>    // …<br>    theme: myTheme,<br>  })<br>  gitment.render(‘container’)</p>
 <p><div id="container"></div></p>
 <p><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"></p>
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    if (state.user.login) {
+      container.innerText = `Hello, ${state.user.login}`
+    }
+    return container
+  }
+}
+
+const gitment = new Gitment({
+  // ...
+  theme: myTheme,
+})
+
+gitment.render(document.body)
+// or
+// gitment.renderSomthing(document.body)
+
+
 var gitment = new Gitment({
   id: '页面 ID', // 可选。默认为 location.href
   owner: 'linyuxuanlin',
