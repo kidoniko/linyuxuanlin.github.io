@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linyuxuanlin.github.io/"/>
-  <updated>2017-07-20T12:06:24.000Z</updated>
+  <updated>2017-08-01T03:18:57.000Z</updated>
   <id>https://linyuxuanlin.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://linyuxuanlin.github.io/2017/08/01/%E7%A7%91%E6%8A%80/%E7%BB%99Hexo%E6%B7%BB%E5%8A%A0%E7%95%99%E8%A8%80%E6%9D%BF/"/>
+    <id>https://linyuxuanlin.github.io/2017/08/01/科技/给Hexo添加留言板/</id>
+    <published>2017-08-01T03:10:39.000Z</published>
+    <updated>2017-08-01T03:18:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>三步建立可用的评论系统</p>
+<a id="more"></a>
+<p>可以点开看看效果：<a href="http://radiationstu.cn/about/" target="_blank" rel="external">“关于”页面</a><br>大家知道，最近多说停止服务了，网易云跟帖也挂了，disqus在墙内没法看到。<br>于是，有人突发奇想，利用 GitHub 的 Issues 来搭建评论系统。<br>项目的中文简介：<a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="external">文档</a><br>GitHub 仓库：<a href="https://github.com/imsun/gitment" target="_blank" rel="external">gitment</a><br>示例页面：<a href="https://imsun.github.io/gitment/" target="_blank" rel="external">Gitment Demo Page</a><br>中文介绍写得有些复杂，我给大家简化一下。</p>
+<h2 id="1-注册-OAuth-Application"><a href="#1-注册-OAuth-Application" class="headerlink" title="1. 注册 OAuth Application"></a>1. 注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="external">点击此处</a> 注册一个 Application，按下图填写相关信息：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2218072-bddd580954bcd4f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2017-08-01 上午10.29.14.png"><br>点击绿色的按钮提交<br>然后你会得到 client ID 和 client secret，之后会用到的</p>
+<h2 id="2-把代码引入到你的页面"><a href="#2-把代码引入到你的页面" class="headerlink" title="2. 把代码引入到你的页面"></a>2. 把代码引入到你的页面</h2><p>eg. 我在 关于我 的页面添加评论，只需要把以下代码添加到文章的末尾：<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">var gitment = new Gitment(&#123;</div><div class="line">  id: '页面 ID', // 可选。默认为 location.href</div><div class="line">  owner: 'linyuxuanlin',  //改你自己的名字</div><div class="line">  repo: 'Comments',  //专门储存评论一个GitHub仓库</div><div class="line">  oauth: &#123;</div><div class="line">    client_id: '45dc966马赛克b1950', //改为你自己的，下同</div><div class="line">    client_secret: '839马赛克647523eb马赛克c6ad1f598f5df',</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line">gitment.render('container')</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="3-初始化评论"><a href="#3-初始化评论" class="headerlink" title="3. 初始化评论"></a>3. 初始化评论</h2><p>把页面 <strong>发布</strong> 一下<br>然后打开有放置评论的页面，用你的GitHub账号登陆，按提示点击 <strong>初始化</strong> 按钮<br>这样评论系统就建立啦~</p>
+<h2 id="更多自定义"><a href="#更多自定义" class="headerlink" title="更多自定义"></a>更多自定义</h2><p>请见<a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="external">中文介绍</a></p>
+<p>有兴趣可以加我微信，一起讨论hexo建站~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;三步建立可用的评论系统&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="科技" scheme="https://linyuxuanlin.github.io/categories/%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="Hexo" scheme="https://linyuxuanlin.github.io/tags/Hexo/"/>
+    
+      <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Wight-基于云平台的去线缆化照明系统</title>
@@ -864,92 +897,6 @@
 &lt;li&gt;蜂鸣器 (无源)&lt;/li&gt;
 &lt;li&gt;Arduino&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="科技" scheme="https://linyuxuanlin.github.io/categories/%E7%A7%91%E6%8A%80/"/>
-    
-    
-      <category term="Arduino" scheme="https://linyuxuanlin.github.io/tags/Arduino/"/>
-    
-      <category term="C++" scheme="https://linyuxuanlin.github.io/tags/C/"/>
-    
-      <category term="教程" scheme="https://linyuxuanlin.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="作品" scheme="https://linyuxuanlin.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>便携式测距仪</title>
-    <link href="https://linyuxuanlin.github.io/2016/09/11/%E7%A7%91%E6%8A%80/%E4%BE%BF%E6%90%BA%E5%BC%8F%E6%B5%8B%E8%B7%9D%E4%BB%AA/"/>
-    <id>https://linyuxuanlin.github.io/2016/09/11/科技/便携式测距仪/</id>
-    <published>2016-09-11T03:09:41.000Z</published>
-    <updated>2017-07-02T02:32:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>想要一块能固定在手腕上的测距的工具吗？</p>
-<p>来玩玩这个项目吧</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="首先，你需要："><a href="#首先，你需要：" class="headerlink" title="首先，你需要："></a>首先，你需要：</h3><ul>
-<li>HC-SR04超声波测距模块</li>
-<li>OLED显示屏 （这里用的是ISP类型的）</li>
-<li>Arduino nano</li>
-<li>锂电池</li>
-<li>按钮/开关</li>
-</ul>
-<h3 id="接线："><a href="#接线：" class="headerlink" title="接线："></a>接线：</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Arduino</th>
-<th style="text-align:center">OLED</th>
-<th style="text-align:center">HC-SR04</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">D13</td>
-<td style="text-align:center">SCK/D0</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">D11</td>
-<td style="text-align:center">MOSI/D1</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">D10</td>
-<td style="text-align:center">CS/DC</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">D9</td>
-<td style="text-align:center">RST</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">D8</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Echo</td>
-</tr>
-<tr>
-<td style="text-align:center">D7</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">Trig</td>
-</tr>
-</tbody>
-</table>
-<h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;U8glib.h&gt;</span></span></div><div class="line"><span class="function">U8GLIB_SSD1306_128X64 <span class="title">u8g</span><span class="params">(<span class="number">10</span>, <span class="number">9</span>, <span class="number">12</span>, <span class="number">11</span>, <span class="number">13</span>)</span></span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> TrigPin = <span class="number">7</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> EchoPin = <span class="number">8</span>;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> distance;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</div><div class="line">  pinMode(TrigPin, OUTPUT);</div><div class="line">  pinMode(EchoPin, INPUT);</div><div class="line">  u8g.setColorIndex(<span class="number">1</span>);        </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  delayMicroseconds(<span class="number">2</span>);</div><div class="line">  digitalWrite(TrigPin, HIGH);</div><div class="line">  delayMicroseconds(<span class="number">10</span>);</div><div class="line">  digitalWrite(TrigPin, LOW);</div><div class="line">  distance = pulseIn(EchoPin, HIGH) / <span class="number">58.00</span>;</div><div class="line">  u8g.firstPage();</div><div class="line">  <span class="keyword">do</span> &#123;</div><div class="line">    draw();</div><div class="line">  &#125; <span class="keyword">while</span> ( u8g.nextPage() );</div><div class="line">  delay(<span class="number">100</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</div><div class="line">  u8g.setFont(u8g_font_ncenB24);</div><div class="line">  u8g.drawStr( <span class="number">80</span>, <span class="number">50</span>, <span class="string">"cm"</span>);</div><div class="line">  u8g.setPrintPos(<span class="number">5</span>, <span class="number">50</span>);</div><div class="line">  u8g.print(distance);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这是个以前做过的项目，距今历史悠久，所以教程不是那么完整。<br>请自己发挥想象，让它变得更可爱。<br>有问题请在文章下面留言:D</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;想要一块能固定在手腕上的测距的工具吗？&lt;/p&gt;
-&lt;p&gt;来玩玩这个项目吧&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     
